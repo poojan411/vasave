@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/vasave/static/css/main.073c9b0a.css",
+    "main.js": "/vasave/static/js/main.a66b6d96.js",
+    "static/js/787.0579c8bd.chunk.js": "/vasave/static/js/787.0579c8bd.chunk.js",
+    "static/media/vbs_logo.png": "/vasave/static/media/vbs_logo.75ff4c2e7bfb9f5a0499.png",
+    "static/media/logo.svg": "/vasave/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/vasave/index.html",
+    "main.073c9b0a.css.map": "/vasave/static/css/main.073c9b0a.css.map",
+    "main.a66b6d96.js.map": "/vasave/static/js/main.a66b6d96.js.map",
+    "787.0579c8bd.chunk.js.map": "/vasave/static/js/787.0579c8bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a66b6d96.js"
+  ]
+}
