@@ -36,8 +36,8 @@ const headerOptions = [
 
 
 function Header(props) {
-  const { sections, title } = props;
-  console.log('vbsLogo',vbsLogo);
+  const { sections, title, headerData } = props;
+  console.log('headerData',headerData);
 
   return (
     <div>
@@ -54,7 +54,7 @@ function Header(props) {
         <Grid item lg={8} alignSelf="center">
           
       <Grid container spacing={2} justifyContent="flex-end">
-      {headerOptions.map((item, index) =>{
+      {headerData && headerData.map((item, index) =>{
     console.log('headerOptions', item?.title);
           return (
             <Grid item={3} >
