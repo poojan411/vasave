@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import ImageListItem from '@mui/material/ImageListItem';
 import { height } from '@mui/system';
+import '../styles/header.css';
 
 
 const vbsLogo = '../images/vbs_logo.png';
@@ -40,7 +41,15 @@ function Header(props) {
   console.log('headerData',headerData);
 
   return (
-    <div>
+    <div className="header"
+    style={{
+      //  position:'absolute', 
+      // position:'fixed',
+      //  width: '100%',
+      //   marginTop: '20px',
+      //    boxShadow: '0 4px 2px -2px gray'
+         }}
+         >
       <Toolbar style={{ padding: "10px 40px" }} sx={{ borderBottom: 1, borderColor: 'divider' }}>
 
       <Grid container spacing={2}>
@@ -51,13 +60,13 @@ function Header(props) {
         </ImageListItem>
 
         </Grid>
-        <Grid item lg={8} alignSelf="center">
+        <Grid item lg={6} alignSelf="center">
           
       <Grid container spacing={2} justifyContent="flex-end">
       {headerData && headerData.map((item, index) =>{
     console.log('headerOptions', item?.title);
           return (
-            <Grid item={3} >
+            <Grid item lg={2} >
         
 
               <Typography
@@ -66,10 +75,17 @@ function Header(props) {
               variant="h6"
               color="green"
               align="center"
+              style={{
+           
+                lineHeight: 2.3,
+                color: '#181c51',
+                fontSize: '20px',
+                textTransform: 'capitalize'
+              }}
               noWrap
               sx={{ flex: 1 }}
             >
-              <Button variant="text">{item?.title}</Button>
+             {item?.title}
               
             </Typography>
               </Grid>

@@ -1,0 +1,12 @@
+.header{
+    width: "100%";
+    position: absolute;
+}
+.buttonStyle {
+    border-color: #263238;
+    background-color: #263238;
+    color: #fff;
+    border-radius: 33px;
+    padding: 14px;
+    font-size: 18px;
+}
