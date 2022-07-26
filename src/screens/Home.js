@@ -28,7 +28,7 @@ function Home(props) {
     return (
       <div>
 <Header headerData={headerOptions} />
-<TitleCard />
+<TitleCard title="Vasave Business Solutions"/>
 <Grid container justifyContent='center' style={{ padding: '30px', marginTop: '100px'}}>
   <Grid item lg={6}>
     <Typography variant='h6' textAlign='center'>

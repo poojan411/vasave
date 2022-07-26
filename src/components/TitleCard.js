@@ -22,8 +22,8 @@ const vbsLogo = '../images/vbs_logo.png';
 
 function TitleCard(props) {
   const { sections, title, headerData } = props;
-  console.log('headerData',headerData);
   const backgroungImg = '../images/shape1.png';
+  console.log('title =========>',title);
 
   return (
     <Grid container spacing={2}>
@@ -32,10 +32,10 @@ function TitleCard(props) {
                 <Grid container alignContent='center' justifyContent='center'>
 
         <Grid container style={{ marginTop: '200px'}} spacing={2}>
-            <Grid item lg={12}>
-            <Typography variant="h2" component="h6" align="center" alignContent='center' style={{textAlign: 'center'}}>
-            Vasave Business Solutions
-        </Typography>
+            <Grid item lg={12} className="titleStyle" >
+              <h2 className="titleStyle">
+                {title}
+              </h2>
             </Grid>
             <Grid item lg={12}>
             <Typography variant="h5" component="h6">

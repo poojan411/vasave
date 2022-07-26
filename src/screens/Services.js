@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import waveone from '../images/wave.svg';
 import TitleCard from '../components/TitleCard';
 
-function AboutUs(props) {
+function Services(props) {
   const headerOptions = [
     {
       title: 'home',
@@ -28,7 +28,7 @@ function AboutUs(props) {
     return (
       <div>
 <Header headerData={headerOptions} />
-<TitleCard title="About Us"/>
+<TitleCard title="Service"/>
 <Grid container justifyContent='center' style={{ padding: '30px', marginTop: '100px'}}>
   <Grid item lg={6}>
     <Typography variant='h6' textAlign='center'>
@@ -71,4 +71,4 @@ Our aim is to expand and evolve, while maintaining exceptional service quality.
 //         </Grid>
        
 //       </Grid> */}
-export default AboutUs;
+export default Services;

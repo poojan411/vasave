@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import waveone from '../images/wave.svg';
 import TitleCard from '../components/TitleCard';
 
-function AboutUs(props) {
+function Contact(props) {
   const headerOptions = [
     {
       title: 'home',
@@ -28,34 +28,24 @@ function AboutUs(props) {
     return (
       <div>
 <Header headerData={headerOptions} />
-<TitleCard title="About Us"/>
-<Grid container justifyContent='center' style={{ padding: '30px', marginTop: '100px'}}>
-  <Grid item lg={6}>
-    <Typography variant='h6' textAlign='center'>
-    Vasave Business Solutions is one of the UK’s leading IT Business Solutions companies.
-We have been providing extensive services since 2012.
-Our aim is to expand and evolve, while maintaining exceptional service quality.
-    </Typography>
-    <Button className='buttonStyle' style={{ marginTop: 20}}>
-      Learn More
-    </Button>
+<TitleCard title="Contact"/>
+<Grid container justifyContent="center">
+    <Grid item lg={10}>
+        <Grid container>
+            <Grid item lg={8}>
+                <Typography>
+                    Get in touch
+                </Typography>
 
+            </Grid>
+            <Grid item lg={4}>
 
-  </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
 </Grid>
-      {/* <Grid container spacing={2}>
-        <Grid item lg={6}>
-        <Typography variant="h3" component="h6">
-        Vasave Business Solutions
-      </Typography>
-        </Grid>
-        <Grid item lg={6}>
-        <Typography variant="h5" component="h6">
-        Book appointment
-      </Typography>
-        </Grid>
-      </Grid>
-   */}
+
+
       </div>
     );
 }
@@ -71,4 +61,4 @@ Our aim is to expand and evolve, while maintaining exceptional service quality.
 //         </Grid>
        
 //       </Grid> */}
-export default AboutUs;
+export default Contact;
