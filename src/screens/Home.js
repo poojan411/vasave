@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import waveone from "../images/wave.svg";
 import TitleCard from "../components/TitleCard";
 import Footer from "../components/Footer";
+import "../styles/homestyles.css";
 
 function Home(props) {
   const headerOptions = [
@@ -37,16 +38,39 @@ function Home(props) {
         style={{ padding: "30px", marginTop: "100px" }}
       >
         <Grid item lg={6}>
-          <Typography variant="h6" textAlign="center">
-            Vasave Business Solutions is one of the UK’s leading IT Business
-            Solutions companies. We have been providing extensive services since
-            2012. Our aim is to expand and evolve, while maintaining exceptional
-            service quality.
-          </Typography>
-          <Button className="buttonStyle" style={{ marginTop: 20 }}>
+          {/* <Button className="buttonStyle" style={{ marginTop: 20 }}>
             Learn More
-          </Button>
+          </Button> */}
         </Grid>
+      </Grid>
+      <Grid>
+        <div
+          className="waveStringStyles"
+          style={{
+            backgroundImage: `url(${require("../images/waveStrings.png")})`,
+          }}
+        >
+          <Grid container justifyContent="center">
+            <Grid item lg={8} style={{ marginTop: "20px" }}>
+              <Typography>Features</Typography>
+            </Grid>
+            <Grid item lg={8} style={{ marginTop: "20px" }}>
+              <Typography>We are different because...</Typography>
+            </Grid>
+            <Grid item lg={8} style={{ marginTop: "20px" }}>
+              <Typography variant="h6" textAlign="center">
+                Vasave Business Solutions is one of the UK’s leading IT Business
+                Solutions companies. We have been providing extensive services
+                since 2012. Our aim is to expand and evolve, while maintaining
+                exceptional service quality.
+              </Typography>
+            </Grid>
+
+            <Grid item lg={8}>
+              <p>Creative idea</p>
+            </Grid>
+          </Grid>
+        </div>
       </Grid>
       <Footer />
       {/* <Grid container spacing={2}>

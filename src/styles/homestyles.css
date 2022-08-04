@@ -10,3 +10,11 @@
     padding: 14px;
     font-size: 18px;
 }
+.waveStringStyles{
+    height: 680px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+}
