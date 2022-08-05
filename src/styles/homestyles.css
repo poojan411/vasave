@@ -18,3 +18,9 @@
     display: flex;
     align-items: center;
 }
+.backgroungImgAboutUs{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

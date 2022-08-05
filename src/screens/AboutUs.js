@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Header from "../components/Header";
@@ -9,6 +9,9 @@ import TitleCard from "../components/TitleCard";
 import Footer from "../components/Footer";
 
 function AboutUs(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const headerOptions = [
     {
       title: "home",
