@@ -77,13 +77,23 @@ function Home(props) {
         >
           <Grid container justifyContent="center">
             <Grid item lg={8} style={{ marginTop: "20px" }}>
-              <Typography>Features</Typography>
+              <Typography className="contentTitle1">Features</Typography>
             </Grid>
             <Grid item lg={8} style={{ marginTop: "20px" }}>
-              <Typography>We are different because...</Typography>
+              <Typography className="contentTitle2">
+                We are <span style={{ color: "#59e3a7" }}>different</span>{" "}
+                because...
+              </Typography>
             </Grid>
             <Grid item lg={8} style={{ marginTop: "20px" }}>
-              <Typography variant="h6" textAlign="center">
+              <Typography
+                className="contentTitle3"
+                variant="h6"
+                textAlign="center"
+                style={{
+                  marginBottom: "20px",
+                }}
+              >
                 Vasave Business Solutions is one of the UK’s leading IT Business
                 Solutions companies. We have been providing extensive services
                 since 2012. Our aim is to expand and evolve, while maintaining
