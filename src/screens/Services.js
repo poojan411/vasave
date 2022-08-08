@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import waveone from "../images/wave.svg";
 import TitleCard from "../components/TitleCard";
 import Footer from "../components/Footer";
+import ServicesCard from "../components/ServicesCard";
 
 function Services(props) {
   useEffect(() => {
@@ -49,6 +50,11 @@ function Services(props) {
           <Button className="buttonStyle" style={{ marginTop: 20 }}>
             Learn More
           </Button>
+        </Grid>
+      </Grid>
+      <Grid container justifyContent="center">
+        <Grid item lg={8}>
+          <ServicesCard />
         </Grid>
       </Grid>
       {/* <Grid container spacing={2}>

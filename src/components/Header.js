@@ -73,7 +73,7 @@ function Header(props) {
       }
     >
       <Toolbar
-        style={{ padding: "10px 10px" }}
+        style={{ padding: headerColor === "stickyHeader" ? "3px" : "10px" }}
         // sx={{ borderBottom: 1, borderColor: "divider" }}
       >
         <Grid container justifyContent="center">

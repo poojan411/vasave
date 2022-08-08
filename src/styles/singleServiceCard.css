@@ -1,0 +1,18 @@
+.cardTitle{
+    color: #181c51;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+    font-size: 24px;
+}
+.contentTitle1{
+    font-family: "Open Sans",sans-serif;
+    color: #aaabbf;
+    display: block;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    line-height: 2.777 !important;
+    margin-bottom: 0.125rem !important;
+    font-size: 18px !important;
+}
