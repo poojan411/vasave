@@ -31,14 +31,21 @@ function TitleCard(props) {
               }}
             >
               <Grid container alignContent="center" justifyContent="center">
-                <Grid container style={{ marginTop: "200px" }} spacing={2}>
-                  <Grid item lg={12} className="titleStyle">
+                <Grid
+                  container
+                  style={{ marginTop: "200px" }}
+                  spacing={2}
+                  justifyContent="center"
+                >
+                  <Grid item md={12} lg={8} xl={7} className="titleStyle">
                     <h2 className="titleStyle">{title}</h2>
                   </Grid>
-                  <Grid item lg={12}>
-                    <Typography variant="h5" component="h6">
-                      Get started
-                    </Typography>
+                  <Grid container justifyContent="center">
+                    <Grid item md={10} lg={7} xl={6}>
+                      <Typography variant="h5" component="h6">
+                        Get started
+                      </Typography>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>

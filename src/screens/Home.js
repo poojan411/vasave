@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import FeatureCard from "../components/FeatureCard";
 import "../styles/homestyles.css";
 import creativeImage from "../images/cardLogos/CreativeCardLogo.png";
+import ServicesCard from "../components/ServicesCard";
 
 function Home(props) {
   const headerOptions = [
@@ -77,7 +78,7 @@ function Home(props) {
         >
           <Grid container justifyContent="center">
             <Grid item lg={8} style={{ marginTop: "20px" }}>
-              <Typography className="contentTitle1">Features</Typography>
+              <Typography className="contentTitle1home">Features</Typography>
             </Grid>
             <Grid item lg={8} style={{ marginTop: "20px" }}>
               <Typography className="contentTitle2">
@@ -123,6 +124,33 @@ function Home(props) {
             </Grid>
           </Grid>
         </div>
+      </Grid>
+      <Grid container justifyContent="center" style={{ marginTop: "200px" }}>
+        <Grid item lg={8} style={{ marginBottom: "20px" }}>
+          <Typography className="contentTitle1home">Services</Typography>
+        </Grid>
+        <Grid item lg={8} style={{ marginTop: "20px" }}>
+          <Typography className="contentTitle2">
+            Check <span style={{ color: "#59e3a7" }}>our</span> Services
+          </Typography>
+        </Grid>
+        <Grid item lg={8} style={{ marginTop: "20px", marginBottom: "40px" }}>
+          <Typography
+            className="contentTitle3"
+            variant="h6"
+            textAlign="center"
+            style={{
+              marginBottom: "20px",
+            }}
+          >
+            We offer a number of IT services and solutions, just as it states in
+            the name! Have a look below on exactly what we can provide, you
+            won’t be disappointed in our service…
+          </Typography>
+        </Grid>
+        <Grid item lg={8}>
+          <ServicesCard />
+        </Grid>
       </Grid>
       {/* <Grid
         item

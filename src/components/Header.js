@@ -77,7 +77,7 @@ function Header(props) {
         // sx={{ borderBottom: 1, borderColor: "divider" }}
       >
         <Grid container justifyContent="center">
-          <Grid item lg={10}>
+          <Grid item lg={10} md={12}>
             <Grid container justifyContent="space-between" flexDirection="row">
               <Grid item lg={4}>
                 <ImageListItem>

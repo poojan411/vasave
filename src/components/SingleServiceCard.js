@@ -11,32 +11,41 @@ import "../styles/singleServiceCard.css";
 
 function SingleServiceCard(props) {
   const { title, shortDescription, image } = props;
+  console.log("image=>", image);
+  const imagePath = `require("${image}")`;
   return (
-    <Card
+    <div
       //   sx={{ maxWidth: 345 }}
       style={{
         // backgroundColor: "#F7F7F7",
         padding: "10px",
-        borderBottom: "1px solid grey",
+        borderBottom: "1px solid #e8e8e8",
 
         // paddingTop: "40px",
         width: "100%",
+        marginBottom: "40px",
       }}
       //   className="cardContent"
     >
       <Grid container spacing={2}>
         <Grid item lg={3}>
-          <CardMedia
+          <img
+            // src={imagePath}
+            src={require("../images/servicesLogos/consultancyLogo.png")}
+            alt="vasave business services"
+            style={{ height: "80px", width: "80px", marginTop: "15px" }}
+          />
+          {/* <CardMedia
             component="img"
-            height="140"
+            height="100"
             image={image}
             alt="green iguana"
             // className="cardLogo"
 
             //   style={{ height: "100px", width: "100px", padding: "20px" }}
-          />
+          /> */}
         </Grid>
-        <Grid item lg={9}>
+        <Grid item lg={9} style={{ paddingLeft: "30px" }}>
           <Typography className="cardTitle">{title}</Typography>
           <Typography className="contentTitle1">{shortDescription}</Typography>
         </Grid>
@@ -71,7 +80,7 @@ function SingleServiceCard(props) {
           </Typography>
         </CardContent>
       </div> */}
-    </Card>
+    </div>
   );
 }
 export default SingleServiceCard;
