@@ -5,6 +5,7 @@ import AboutUs from "./screens/AboutUs";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Services from "./screens/Services";
 import Contact from "./screens/Contact";
+import ServiceDetails from "./screens/ServiceDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/serviceDetails" element={<ServiceDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

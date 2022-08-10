@@ -1,0 +1,44 @@
+.servicesTitleCard{
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans",sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #263238;
+    line-height: 1.666;
+    background: #f7f7f7;
+    padding: 22px 25px;
+    font-size: 18px;
+    transition: all .5s ease-in-out;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.servicesTitleCard:hover{
+    background: #f0fff4;
+    box-shadow: 0 2px 27px 0 rgb(0 0 0 / 9%);
+}
+.servicesTitleCardActive{
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans",sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #263238;
+    line-height: 1.666;
+    background: #f0fff4;
+    box-shadow: 0 2px 27px 0 rgb(0 0 0 / 9%);
+    padding: 22px 25px;
+    font-size: 18px;
+    transition: all .5s ease-in-out;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 30px; 
+}
+.serviceLogoStyle{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}

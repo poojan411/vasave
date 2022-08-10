@@ -99,7 +99,6 @@ function Header(props) {
                             key={index}
                             component="h2"
                             variant="h6"
-                            color="green"
                             align="center"
                             onClick={() => {
                               console.log("selectedpage", item);
@@ -107,16 +106,17 @@ function Header(props) {
 
                               // <Link to="/aboutus" />
                             }}
-                            style={{
-                              lineHeight: 2.3,
-                              color: "#181c51",
-                              fontSize: "20px",
-                              textTransform: "capitalize",
-                              backgroungColor: "green",
-                              cursor: "pointer",
-                            }}
+                            // style={{
+                            //   lineHeight: 2.3,
+                            //   color: "#181c51",
+                            //   fontSize: "20px",
+                            //   textTransform: "capitalize",
+                            //   backgroungColor: "green",
+                            //   cursor: "pointer",
+                            // }}
                             noWrap
                             sx={{ flex: 1 }}
+                            className="headerTitleStyle"
                           >
                             {item?.title}
                           </Typography>

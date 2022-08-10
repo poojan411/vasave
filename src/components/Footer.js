@@ -16,6 +16,9 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import "../styles/footer.css";
+import termsCondition from "../config/policyFiles/terms-condition.pdf";
+import privacyPolicy from "../config/policyFiles/privacy-policy.pdf";
+import cookiesPolicy from "../config/policyFiles/cookies-policy.pdf";
 
 const vbsLogo = "../images/vbs_logo.png";
 
@@ -116,10 +119,49 @@ function Footer(props) {
         </Grid>
 
         <Grid item lg={12} className="footerCopyrightDiv">
-          <p className="footerText">
-            Copyright © {currentYear} Made with<span> ❤️ </span> By Vasave, All
-            Rights Reserved
-          </p>
+          <Grid container justifyContent="center">
+            <Grid item lg={5}>
+              <p className="footerText">
+                Copyright © {currentYear} Made with<span> ❤️ </span> By Vasave,
+                All Rights Reserved
+              </p>
+            </Grid>
+            <Grid item lg={5}>
+              <Grid container justifyContent="flex-start">
+                <Grid item lg={4}>
+                  <a
+                    href={termsCondition}
+                    without
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <p className="footerText2">Terms & Conditions</p>
+                  </a>
+                </Grid>
+                <Grid item lg={4}>
+                  <a
+                    href={privacyPolicy}
+                    without
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    // style={{ textDecoration: "none !important" }}
+                  >
+                    <p className="footerText2">Privacy Policy</p>
+                  </a>
+                </Grid>
+                <Grid item lg={4}>
+                  <a
+                    href={cookiesPolicy}
+                    without
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <p className="footerText2">Cookies Policy</p>
+                  </a>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>

@@ -42,11 +42,11 @@ export const virtuesAndValues = [
 
 export const ourServices = [
     { 
-        title: 'CLOUD',
+        title: 'Cloud',
         description: 'It can be difficult for you to switch to a more efficient and stable type of storage in order to secure your business. Maybe its because you have never considered a different storage option. At Vasave, we provide specialized assistance and sound advice on selecting and implementing the best cloud solution for your business. We are here to help you make the switch from local storage to cloud storage a lot easier and less stressfu',
-        imageUrl: "",
+        imageUrl: "../images/servicesLogos/consultancyLogo.png",
         learnMore: true,
-        suServices: [
+        subServices: [
             {
                 title: 'MICROSOFT',
                 description: 'With services like advanced Office 365 applications, Microsoft services are built to help everyone in accessing intelligent cloud services, world-class security and much more.',
@@ -87,9 +87,9 @@ export const ourServices = [
 
     },
     {
-        title: 'CONSULTANCY',
+        title: 'Consultancy',
         description: 'Sometimes a business needs outside-the-box advice an outsiders perspective. Our consultancy services provide just that and much more. We offer quick and efficient expert advice for your business. We also provide resources which can help your company jump onto the bandwagon of future success. Get in touch with our dedicated team in just a few clicks.',
-        imageUrl: "",
+        imageUrl: "../images/cardLogos/CreativeCardLogo.png",
         learnMore: true,
         subServices: [
             { 
@@ -119,9 +119,9 @@ export const ourServices = [
         ],
     },
     {
-        title: 'CYBER SECURITY',
+        title: 'Cyber Security',
         description: 'Cyber Essentials is an easy but powerful, Government-backed scheme that will help you defend your organisation, whatever its capacity, against different types of the most common cyber attacks that can potentially harm your data. Cyber attacks vary in their shapes and sizes. Still, the vast majority are fundamental, carried out by relatively unskilled individuals, and our guidance is designed to prevent these attacks from even touching your devices.',
-        imageUrl: "",
+        imageUrl: "../images/servicesLogos/consultancyLogo.png",
         learnMore: true,
         subServices: [
             {
@@ -170,9 +170,9 @@ export const ourServices = [
 
     },
     {
-        title: 'INFRASTRUCTURE',
+        title: 'Infrastructure',
         description: 'It would be a sin to overlook our extremely well thought-of infrastructure services. Our exceptional delivery of service and budget fixed costs will make our service more appealing to you and your business. Based on your unique needs, we will build an infrastructure for your business, ensuring a scale to growth strategy is formulated.',
-        imageUrl: "",
+        imageUrl: "../images/cardLogos/CreativeCardLogo.png",
         learnMore: true,
         subServices: [
             {
@@ -201,55 +201,55 @@ export const ourServices = [
             },
         ],
     },
-    {
-        title: 'BIOINFORMATICS',
-        description: 'Our bioinformatics Data Analysis as a Service provides stand-alone bioinformatics analysis for NGS or microarray data to help make a biological interpretation of your results without having to pay £1000s on NGS or microarray software for a one-off project.',
-        imageUrl: "",
-        learnMore: true,
-        subServices: [
-            {
-                title: 'NEXT GENERATION SEQUENCING DATA ANALYSIS',
-                description: 'Transcriptomics (RNASeq) - BAM/FASTQ → Differential gene expression → e.g( Cancer, other diseases). Subtyping / clustering. Single cell RNASeq data analysis. TCR (T-cell receptor data analysis). Genomics - BAM/fastq → variants → annotation.',
-                imageUrl: ""
+    // {
+    //     title: 'BIOINFORMATICS',
+    //     description: 'Our bioinformatics Data Analysis as a Service provides stand-alone bioinformatics analysis for NGS or microarray data to help make a biological interpretation of your results without having to pay £1000s on NGS or microarray software for a one-off project.',
+    //     imageUrl: "",
+    //     learnMore: true,
+    //     subServices: [
+    //         {
+    //             title: 'NEXT GENERATION SEQUENCING DATA ANALYSIS',
+    //             description: 'Transcriptomics (RNASeq) - BAM/FASTQ → Differential gene expression → e.g( Cancer, other diseases). Subtyping / clustering. Single cell RNASeq data analysis. TCR (T-cell receptor data analysis). Genomics - BAM/fastq → variants → annotation.',
+    //             imageUrl: ""
 
-            },
-            {
-                title: 'POPULATION GENETIC ANALYSIS',
-                imageUrl: "",
+    //         },
+    //         {
+    //             title: 'POPULATION GENETIC ANALYSIS',
+    //             imageUrl: "",
 
-            },
-            {
-                title: 'COMPARATIVE GENOMICS',
-                imageUrl: ""
-            },
-            {
-                title: 'MICROARRAY DATA ANALYSIS',
-                imageUrl: ""
-            },
-            {
-                title: 'DE NOVO BASED GENOME AND TRANSCRIPTOME ASSEMBLY',
-                imageUrl: ""
+    //         },
+    //         {
+    //             title: 'COMPARATIVE GENOMICS',
+    //             imageUrl: ""
+    //         },
+    //         {
+    //             title: 'MICROARRAY DATA ANALYSIS',
+    //             imageUrl: ""
+    //         },
+    //         {
+    //             title: 'DE NOVO BASED GENOME AND TRANSCRIPTOME ASSEMBLY',
+    //             imageUrl: ""
 
-            },
-            {
-                title: 'VISUALIZATION OF DATA USING R PACKAGES',
-                imageUrl: ""
-            },
-            {
-                title: 'PROJECT MANAGEMENT',
-                imageUrl: ""
-            },
-            {
-                title: 'HANDLE PROJECT USING AGILE PROCESS FOR SUCCESSFUL AND TIMELY DELIVERY',
-                description: 'Work with multiple stakeholders to implement project. Manage the project by Epic → Story → Tasks. GUI and backend testing. Project to development to testing to deployment. Tools like JIRA, confluence etc.',
-                imageUrl: ""
-            },
-            {
-                title: 'EXPERIENCE OF WORKING ON',
-                description: 'High Performance Computing environment, End to end Workflow/Pipeline development including pdf report generation, Technical Expertise, Linux, Perl, R, Python, Shell, mongodb, MySQL, Postgresq, AWS, Bioconductor, Docker, GitHub.',
-                imageUrl: ""
-            },
+    //         },
+    //         {
+    //             title: 'VISUALIZATION OF DATA USING R PACKAGES',
+    //             imageUrl: ""
+    //         },
+    //         {
+    //             title: 'PROJECT MANAGEMENT',
+    //             imageUrl: ""
+    //         },
+    //         {
+    //             title: 'HANDLE PROJECT USING AGILE PROCESS FOR SUCCESSFUL AND TIMELY DELIVERY',
+    //             description: 'Work with multiple stakeholders to implement project. Manage the project by Epic → Story → Tasks. GUI and backend testing. Project to development to testing to deployment. Tools like JIRA, confluence etc.',
+    //             imageUrl: ""
+    //         },
+    //         {
+    //             title: 'EXPERIENCE OF WORKING ON',
+    //             description: 'High Performance Computing environment, End to end Workflow/Pipeline development including pdf report generation, Technical Expertise, Linux, Perl, R, Python, Shell, mongodb, MySQL, Postgresq, AWS, Bioconductor, Docker, GitHub.',
+    //             imageUrl: ""
+    //         },
 
-        ],
-    },    
+    //     ],
+    // },    
 ];

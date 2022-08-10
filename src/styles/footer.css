@@ -1,6 +1,11 @@
 .footerText{
     text-align: center;
 }
+.footerText2{
+    text-align: center;
+    cursor: pointer;
+
+}
 .footerCopyrightDiv{
     /* background-color: aliceblue; */
     padding: 2px;
@@ -39,3 +44,13 @@ font-size: 16px;
 font-weight: 400;
 text-transform: capitalize !important;
 }
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    color: #59e3a7;
+    text-decoration: none;
+    cursor: pointer;
+  }
