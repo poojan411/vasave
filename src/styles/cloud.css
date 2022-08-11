@@ -4,5 +4,54 @@
     line-height: 1.19;
     font-size: 42px;
     margin-bottom: 1.6rem;
+    text-align: left;
 
+}
+.serviceDescriptionTitle{
+    margin-bottom: 1.5rem !important;
+    text-align: left;
+    /* letter-spacing: 1px; */
+    line-height: 24px;
+    color: #59e3a7 !important;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+.serviceDescriptionComponent{
+    margin-bottom: 2.5rem !important;
+    text-align: left;
+    /* letter-spacing: 1px; */
+    line-height: 24px;
+    font-size: 18px;
+    color: #6c6e75;
+}
+.subServiceCard{
+    display: flex;
+    margin-bottom: 80px;
+}
+.subServiceTitle{
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-top:'0px';
+}
+.subServiceImage{
+height: auto;
+width: 100%;
+}
+.buttonStyle{
+    border-color: #263238;
+    background-color: #263238;
+    color: #fff;
+    padding: 14px 23px;
+    border-radius: 31px;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.buttonStyle:hover {
+   background-color: #285DA2;
 }

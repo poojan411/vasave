@@ -16,6 +16,8 @@ import CounsultancyLogo from "../images/servicesLogos/consultancyLogo.png";
 import generalServiceImage from "../images/serviceDetailsimage.png";
 import { width } from "@mui/system";
 import Cloud from "../components/Cloud";
+import Consultancy from "../components/Consultancy";
+import CyberSecurity from "../components/CyberSecurity";
 
 function ServiceDetails(props) {
   const [activeService, setActiveService] = useState(ourServices[0]);
@@ -68,9 +70,16 @@ function ServiceDetails(props) {
                   </div>
                 </Grid>
                 <Grid container>
-                  {activeService?.title === "Cloud" ? <Cloud /> : null}
+                  <Grid item lg={11}>
+                    {activeService?.title === "Cloud" ? (
+                      <Cloud />
+                    ) : activeService?.title === "Consultancy" ? (
+                      <Consultancy />
+                    ) : activeService?.title === "Cyber Security" ? (
+                      <CyberSecurity />
+                    ) : null}
+                  </Grid>
                 </Grid>
-                <p>{activeService?.title}</p>
               </Grid>
             </Grid>
             <Grid item lg={2}>
