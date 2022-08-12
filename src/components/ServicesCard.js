@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -22,29 +23,46 @@ function ServicesCard(props) {
   console.log("title =========>", title);
   const servicesLeft = [
     {
-      title: "cloud",
+      title: "Cloud",
       shortDescription: "Pleasure rationally service are anyone who pursues",
       image: "../images/servicesLogos/consultancyLogo.png",
     },
     {
-      title: "cloud",
+      title: "Consultancy",
       shortDescription: "Pleasure rationally service are anyone who pursues",
       image: "../images/servicesLogos/consultancyLogo.png",
     },
   ];
   const servicesRight = [
     {
-      title: "Digital Marketing",
+      title: "Cyber Security",
       shortDescription: "Pleasure rationally service are anyone who pursues",
       image: "../images/servicesLogos/consultancyLogo.png",
     },
     {
-      title: "cloud",
+      title: "Infrastructure",
       shortDescription: "Pleasure rationally service are anyone who pursues",
       image: "../images/servicesLogos/consultancyLogo.png",
     },
   ];
+  let navigate = useNavigate();
 
+  const navigateServiceDetails = (service) => {
+    const path = "/serviceDetails";
+    let data = {};
+    if (service === "Cloud") {
+      data.service = service;
+    } else if (service === "Consultancy") {
+      data.service = service;
+    } else if (service === "Cyber Security") {
+      data.service = service;
+    } else if (service === "Infrastructure") {
+      data.service = service;
+    }
+    console.log("navigateServiceDetails", service);
+
+    navigate(path, { state: data });
+  };
   return (
     // <Grid cotainer justifyContent="center">
     //   <Grid item lg={8}>
@@ -54,6 +72,9 @@ function ServicesCard(props) {
           servicesLeft.map((item, index) => {
             return (
               <SingleServiceCard
+                onClickNavigate={() => {
+                  navigateServiceDetails(item?.title);
+                }}
                 title={item?.title}
                 shortDescription={item?.shortDescription}
                 image={item?.image}
@@ -73,6 +94,9 @@ function ServicesCard(props) {
           servicesRight.map((item, index) => {
             return (
               <SingleServiceCard
+                onClickNavigate={() => {
+                  navigateServiceDetails(item?.title);
+                }}
                 title={item?.title}
                 shortDescription={item?.shortDescription}
                 image={item?.image}

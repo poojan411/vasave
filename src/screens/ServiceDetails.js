@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import _ from "lodash";
+import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Header from "../components/Header";
@@ -21,6 +22,7 @@ import CyberSecurity from "../components/CyberSecurity";
 
 function ServiceDetails(props) {
   const [activeService, setActiveService] = useState(ourServices[0]);
+  const navigationData = useLocation();
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -29,6 +31,23 @@ function ServiceDetails(props) {
     console.log("ourServices", ourServices);
   }, [activeService]);
 
+  useEffect(() => {
+    if (
+      !_.isEmpty(navigationData) &&
+      !_.isUndefined(navigationData) &&
+      !_.isEmpty(navigationData?.state) &&
+      !_.isUndefined(navigationData?.state)
+    ) {
+      let service = navigationData?.state?.service;
+      console.log("service=========", service);
+      console.log("service=======ourServices==", ourServices);
+      const currentService = ourServices.filter(
+        (item) => item.title === service
+      );
+      console.log("service=======currentService==", currentService);
+      setActiveService(currentService[0]);
+    }
+  }, []);
   const headerOptions = [
     {
       title: "home",
@@ -47,7 +66,12 @@ function ServiceDetails(props) {
       detials: "contact",
     },
   ];
-  console.log("ourServices=======", ourServices);
+
+  console.log(
+    "selected Services= navigation======",
+    navigationData?.state?.service
+  );
+
   return (
     <div>
       <Header headerData={headerOptions} />

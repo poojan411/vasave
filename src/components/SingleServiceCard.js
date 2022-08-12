@@ -10,18 +10,15 @@ import Grid from "@mui/material/Grid";
 import "../styles/singleServiceCard.css";
 
 function SingleServiceCard(props) {
-  const { title, shortDescription, image } = props;
+  const { title, shortDescription, image, onClickNavigate } = props;
   console.log("image=>", image);
   const imagePath = `require("${image}")`;
   return (
     <div
-      //   sx={{ maxWidth: 345 }}
+      onClick={onClickNavigate}
       style={{
-        // backgroundColor: "#F7F7F7",
         padding: "10px",
         borderBottom: "1px solid #e8e8e8",
-
-        // paddingTop: "40px",
         width: "100%",
         marginBottom: "40px",
       }}
