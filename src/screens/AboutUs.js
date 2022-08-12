@@ -7,11 +7,38 @@ import Grid from "@mui/material/Grid";
 import waveone from "../images/wave.svg";
 import TitleCard from "../components/TitleCard";
 import Footer from "../components/Footer";
+import AboutUSImg from "../images/about/about_vasave.jpg";
+import WhyVasaveImg from "../images/about/about_why_vasave.jpg";
+import AboutOurSolution from "../images/about/about_why_vasave.jpg";
 
 function AboutUs(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const aboutusData = [
+    {
+      title: "About Vasave",
+      description:
+        "As one of the UK’s leading IT Business Solution companies, we have been providing extensive IT services to clients all over since 2012.Therefore, our vision is to expand and evolve as a global IT Business Solution, all while maintaining exceptional quality and customer satisfaction in what we provide.",
+      image: AboutUSImg,
+      contactUs: true,
+    },
+    {
+      title: "Why Vasave",
+      description:
+        "Here at Vasave, we value the quality of service, client orientation and support.This is why we spend a great deal of time and effort on constructing a clear view based on the customer’s needs. We enable maximum efficiency and productivity by providing functional and scalable solutions. We are proud of the service we provide because of our excellent track record of providing high-quality service that is appreciated by our clients. Vasave puts customer satisfaction first, which allows the development of long-term sustainable relationships with our clients.",
+      image: WhyVasaveImg,
+      contactUs: true,
+    },
+    {
+      title: "About our solution",
+      description:
+        "As a full IT support provider, we assist small and medium businesses with cost-effective IT solutions, such as troubleshooting, support and expertise in software and hardware services.",
+      image: AboutOurSolution,
+      contactUs: true,
+    },
+  ];
   const headerOptions = [
     {
       title: "home",

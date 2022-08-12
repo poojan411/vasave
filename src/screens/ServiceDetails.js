@@ -19,6 +19,7 @@ import { width } from "@mui/system";
 import Cloud from "../components/Cloud";
 import Consultancy from "../components/Consultancy";
 import CyberSecurity from "../components/CyberSecurity";
+import Infrastructure from "../components/Infrastructure";
 
 function ServiceDetails(props) {
   const [activeService, setActiveService] = useState(ourServices[0]);
@@ -101,6 +102,8 @@ function ServiceDetails(props) {
                       <Consultancy />
                     ) : activeService?.title === "Cyber Security" ? (
                       <CyberSecurity />
+                    ) : activeService?.title === "Infrastructure" ? (
+                      <Infrastructure />
                     ) : null}
                   </Grid>
                 </Grid>
