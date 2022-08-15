@@ -1,8 +1,27 @@
 {
   "files": {
-    "main.css": "/vasave/static/css/main.a2fed7fc.css",
-    "main.js": "/vasave/static/js/main.509231d3.js",
+    "main.css": "/vasave/static/css/main.2cf2898d.css",
+    "main.js": "/vasave/static/js/main.b776b357.js",
     "static/js/787.0579c8bd.chunk.js": "/vasave/static/js/787.0579c8bd.chunk.js",
+    "static/media/consultancy_ecommerce.png": "/vasave/static/media/consultancy_ecommerce.40aee2fa6b2d2b6b2729.png",
+    "static/media/consultancy_training.png": "/vasave/static/media/consultancy_training.40b262389eed7cd6b0f7.png",
+    "static/media/about_vasave.jpg": "/vasave/static/media/about_vasave.a21223455183bb45bc03.jpg",
+    "static/media/infra_hardware.jpg": "/vasave/static/media/infra_hardware.def9d11faa222a3b70cb.jpg",
+    "static/media/cloud_google_workspace.jpg": "/vasave/static/media/cloud_google_workspace.853cb7b4e33c270a1dd5.jpg",
+    "static/media/about_why_vasave.jpg": "/vasave/static/media/about_why_vasave.7593b577df5736eb765c.jpg",
+    "static/media/infra_database.jpg": "/vasave/static/media/infra_database.c4c1962d6137792eddd6.jpg",
+    "static/media/consultancy_recruitment.jpg": "/vasave/static/media/consultancy_recruitment.95b28a3b98ac6d31adea.jpg",
+    "static/media/cyber_iasme_Certificate.jpg": "/vasave/static/media/cyber_iasme_Certificate.6cd0f47ab834898b356a.jpg",
+    "static/media/cloud_cisco_umbrella.png": "/vasave/static/media/cloud_cisco_umbrella.d81bf723dbb1792da37b.png",
+    "static/media/cyber_essential_certificate.jpg": "/vasave/static/media/cyber_essential_certificate.ff818eb6d402b07b1652.jpg",
+    "static/media/cloud_vmware.jpg": "/vasave/static/media/cloud_vmware.d2cef8778e8d3725a3af.jpg",
+    "static/media/cyber-essentials.jpg": "/vasave/static/media/cyber-essentials.74c336d861ccf455b51d.jpg",
+    "static/media/cloud_aws.jpg": "/vasave/static/media/cloud_aws.9639b08f3c91493b012e.jpg",
+    "static/media/cloud-microsoft.jpg": "/vasave/static/media/cloud-microsoft.318b3280e7de994e973b.jpg",
+    "static/media/cyber_essential_plus.jpg": "/vasave/static/media/cyber_essential_plus.32d6b038da8205cba602.jpg",
+    "static/media/consultancy_mcommerce.jpg": "/vasave/static/media/consultancy_mcommerce.6121eeda9bb51cf312f0.jpg",
+    "static/media/cloud_hp.jpg": "/vasave/static/media/cloud_hp.f55791ae74ce2e701ac8.jpg",
+    "static/media/infra_Kaspersky.jpg": "/vasave/static/media/infra_Kaspersky.1f4025cb55bcb3147e14.jpg",
     "static/media/serviceDetailsimage.png": "/vasave/static/media/serviceDetailsimage.7ce59800c8d4203dd55b.png",
     "static/media/cookies-policy.pdf": "/vasave/static/media/cookies-policy.f3ece24dd959925224bd.pdf",
     "static/media/homepageImageOne.png": "/vasave/static/media/homepageImageOne.f6bb2b53668f2fe86722.png",
@@ -15,12 +34,12 @@
     "static/media/logo.svg": "/vasave/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/vasave/index.html",
     "static/media/wave.svg": "/vasave/static/media/wave.cb5a6ed8eda44fc33e1ff07935b74d98.svg",
-    "main.a2fed7fc.css.map": "/vasave/static/css/main.a2fed7fc.css.map",
-    "main.509231d3.js.map": "/vasave/static/js/main.509231d3.js.map",
+    "main.2cf2898d.css.map": "/vasave/static/css/main.2cf2898d.css.map",
+    "main.b776b357.js.map": "/vasave/static/js/main.b776b357.js.map",
     "787.0579c8bd.chunk.js.map": "/vasave/static/js/787.0579c8bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2fed7fc.css",
-    "static/js/main.509231d3.js"
+    "static/css/main.2cf2898d.css",
+    "static/js/main.b776b357.js"
   ]
 }
