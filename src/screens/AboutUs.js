@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import _ from "lodash";
+
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Header from "../components/Header";
@@ -10,6 +12,7 @@ import Footer from "../components/Footer";
 import AboutUSImg from "../images/about/about_vasave.jpg";
 import WhyVasaveImg from "../images/about/about_why_vasave.jpg";
 import AboutOurSolution from "../images/about/about_why_vasave.jpg";
+import "../styles/aboutUs.css";
 
 function AboutUs(props) {
   useEffect(() => {
@@ -78,33 +81,53 @@ function AboutUs(props) {
           </Button>
         </Grid>
       </Grid>
-      {/* <Grid container spacing={2}>
-        <Grid item lg={6}>
-        <Typography variant="h3" component="h6">
-        Vasave Business Solutions
-      </Typography>
-        </Grid>
-        <Grid item lg={6}>
-        <Typography variant="h5" component="h6">
-        Book appointment
-      </Typography>
+      <Grid container justifyContent="center">
+        <Grid item lg={8}>
+          {_.isArray(aboutusData) &&
+            !_.isEmpty(aboutusData) &&
+            aboutusData.map((item, index) => {
+              return (
+                <Grid
+                  contianer
+                  spacing={2}
+                  justifyContent="space-between"
+                  flexDirection="row"
+                  className="subServiceCard"
+                >
+                  <Grid item lg={7}>
+                    <p className="subServiceTitle">{item?.title}</p>
+                    <p className="serviceDescriptionComponent">
+                      {item?.description}
+                    </p>
+                    {item?.learnMore ? (
+                      <span className="buttonStyle"> Learn more </span>
+                    ) : null}
+                  </Grid>
+                  <Grid
+                    item
+                    lg={4.5}
+                    style={{ alignItems: "center", display: "flex" }}
+                  >
+                    <img
+                      src={item?.image}
+                      alt={index.toString()}
+                      className="subServiceImage"
+                    />
+                  </Grid>
+                </Grid>
+              );
+            })}
         </Grid>
       </Grid>
-   */}
+      <Grid container>
+        <Grid item lg={12}>
+          <p className="titleStyle">Our Partners</p>
+        </Grid>
+      </Grid>
+
       <Footer />
     </div>
   );
 }
 
-// {/* <Grid container spacing={2}>
-//         <Grid item xs={6}>
-//           <img src={require('../images/shape1.png')}  style={{ width: "100%"}}/>
-//           {/* svg syntax below */}
-//         {/* <img src={waveone} style={{ width: "100%"}}/> */}
-//         </Grid>
-//         <Grid item xs={6}>
-//         <img src={require('../images/homepageImageOne.png')} alt="vasave business solution logo" style={ { width: "100%"}}/>
-//         </Grid>
-
-//       </Grid> */}
 export default AboutUs;

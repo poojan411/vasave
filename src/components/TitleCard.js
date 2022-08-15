@@ -27,7 +27,8 @@ function TitleCard(props) {
             <div
               className="backgroungImg"
               style={{
-                backgroundImage: `url(${require("../images/shape1.png")})`,
+                // shape1 old variant
+                backgroundImage: `url(${require("../images/shape1New.png")})`,
               }}
             >
               <Grid container alignContent="center" justifyContent="center">
@@ -54,7 +55,7 @@ function TitleCard(props) {
           </Grid>
           <Grid item xs={5}>
             <img
-              src={require("../images/homepageImageOne.png")}
+              src={require("../images/Asset1.png")}
               alt="vasave business solution logo"
               style={{ width: "100%", marginTop: "100px" }}
             />
@@ -100,15 +101,5 @@ function TitleCard(props) {
     </div>
   );
 }
-
-// Header.propTypes = {
-//   sections: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       url: PropTypes.string.isRequired,
-//     }),
-//   ).isRequired,
-//   title: PropTypes.string.isRequired,
-// };
 
 export default TitleCard;

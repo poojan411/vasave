@@ -6,6 +6,9 @@
     cursor: pointer;
 
 }
+.footerContetdiv{
+    margin-top: 200px;
+}
 .footerCopyrightDiv{
     /* background-color: aliceblue; */
     padding: 2px;
@@ -43,6 +46,10 @@ margin: 20px 10px !important;
 font-size: 16px;
 font-weight: 400;
 text-transform: capitalize !important;
+}
+.footerSubOptions:hover{
+color: #59e3a7;
+cursor: pointer;
 }
 a {
     text-decoration: none;

@@ -152,70 +152,10 @@ function Home(props) {
           <ServicesCard />
         </Grid>
       </Grid>
-      {/* <Grid
-        item
-        lg={8}
-        style={{
-          marginTop: "200px",
-          marginBottom: "30px",
-          backgroundColor: "red",
-        }}
-      >
-        <Grid container justifyContent="space-between" flexDirection="row">
-          <Grid item lg={6}>
-            <Typography>About us</Typography>
 
-            <Typography>Best Digital Agency in the Town </Typography>
-            <Typography>Scince 2001</Typography>
-            <Typography>
-              Pleasure rationally encounter consequences that are extremely
-              painful. Nor again is there anyone who loves or pursues or desires
-              to obtain
-            </Typography>
-            <Typography>
-              Pleasure rationally encounter consequences that are extremely
-              painful. Nor again is there
-            </Typography>
-          </Grid>
-          <Grid item lg={6}>
-            <div
-              className="backgroungImg"
-              style={{
-                backgroundImage: `url(${require("../images/shape2.png")})`,
-                height: "500px",
-                width: " 600px",
-              }}
-            ></div>
-          </Grid>
-        </Grid>
-      </Grid> */}
       <Footer />
-      {/* <Grid container spacing={2}>
-        <Grid item lg={6}>
-        <Typography variant="h3" component="h6">
-        Vasave Business Solutions
-      </Typography>
-        </Grid>
-        <Grid item lg={6}>
-        <Typography variant="h5" component="h6">
-        Book appointment
-      </Typography>
-        </Grid>
-      </Grid>
-   */}
     </div>
   );
 }
 
-// {/* <Grid container spacing={2}>
-//         <Grid item xs={6}>
-//           <img src={require('../images/shape1.png')}  style={{ width: "100%"}}/>
-//           {/* svg syntax below */}
-//         {/* <img src={waveone} style={{ width: "100%"}}/> */}
-//         </Grid>
-//         <Grid item xs={6}>
-//         <img src={require('../images/homepageImageOne.png')} alt="vasave business solution logo" style={ { width: "100%"}}/>
-//         </Grid>
-
-//       </Grid> */}
 export default Home;

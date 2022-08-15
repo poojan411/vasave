@@ -31,6 +31,13 @@ function ServiceDetails(props) {
     });
     console.log("ourServices", ourServices);
   }, [activeService]);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    console.log("ourServices", ourServices);
+  }, []);
 
   useEffect(() => {
     if (

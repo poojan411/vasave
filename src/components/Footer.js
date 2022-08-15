@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import _ from "lodash";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -24,10 +26,45 @@ const vbsLogo = "../images/vbs_logo.png";
 
 function Footer(props) {
   const { sections, title, headerData } = props;
-  const backgroungImg = "../images/shape1.png";
   const currentYear = new Date().getFullYear();
   //   console.log("currentYear =========>", currentYear);
+  const quickLinksArray = [
+    { id: 1, title: "About Vasave business", path: "/aboutus" },
+    { id: 2, title: "What we stand for", path: "/aboutus" },
+    { id: 3, title: " Our services", path: "/services" },
+  ];
+  const servicesArray = [
+    { id: 1, title: "Cloud", path: "/serviceDetails" },
+    { id: 2, title: "Consultancy", path: "/serviceDetails" },
+    { id: 3, title: "Cyber Security", path: "/serviceDetails" },
+    { id: 4, title: "Infrastructure", path: "/serviceDetails" },
+  ];
+  let navigate = useNavigate();
+  const navigatePage = (path) => {
+    console.log("navigatePage========>", path);
+    navigate(path);
+  };
 
+  const navigateServices = (service) => {
+    const path = "/serviceDetails";
+    let data = {};
+    if (service === "Cloud") {
+      data.service = service;
+    } else if (service === "Consultancy") {
+      data.service = service;
+    } else if (service === "Cyber Security") {
+      data.service = service;
+    } else if (service === "Infrastructure") {
+      data.service = service;
+    }
+    console.log("navigateServiceDetails", service);
+
+    navigate(path, { state: data });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <Grid container>
@@ -35,10 +72,10 @@ function Footer(props) {
           <div
             className="backgroungImgFooter"
             style={{
-              backgroundImage: `url(${require("../images/footerWave.png")})`,
+              backgroundImage: `url(${require("../images/FooterWaveNew.png")})`,
             }}
           >
-            <Grid container justifyContent="center">
+            <Grid container justifyContent="center" className="footerContetdiv">
               <Grid item lg={8.8} spacing={1}>
                 <Grid container>
                   <Grid item lg={3} justifyContent="center">
@@ -59,58 +96,79 @@ function Footer(props) {
                         extremely painful. Nor again is there
                       </Typography>
                     </Grid>
-                    <Grid container justifyContent="center">
-                      <Grid container lg={8}>
-                        <Grid item lg={3}>
-                          <FacebookOutlinedIcon />
-                        </Grid>
-                        <Grid item lg={3}>
-                          <TwitterIcon />
-                        </Grid>
-                        <Grid item lg={3}>
-                          <TwitterIcon />
-                        </Grid>
-                        <Grid item lg={3}>
-                          <WhatsappOutlinedIcon />
-                        </Grid>
-                      </Grid>
-                    </Grid>
                   </Grid>
                   <Grid item lg={3}>
                     <Typography variant="h6" className="footerTitle">
                       Quick Link
                     </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      About Vasave business
-                    </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      What we stand for
-                    </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      Our services
-                    </Typography>
+                    {_.isArray(quickLinksArray) &&
+                      !_.isEmpty(quickLinksArray) &&
+                      quickLinksArray.map((item, index) => {
+                        console.log("navigatePage======item==>", item);
+                        return (
+                          <Typography
+                            key={item?.id}
+                            onClick={() => {
+                              navigatePage(item?.path);
+                            }}
+                            variant="h8"
+                            className="footerSubOptions"
+                          >
+                            {item?.title}
+                          </Typography>
+                        );
+                      })}
                   </Grid>
                   <Grid item lg={3}>
                     <Typography variant="h6" className="footerTitle">
                       Services
                     </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      Cloud
-                    </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      Consultancy
-                    </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      Cyber Security
-                    </Typography>
-                    <Typography variant="h8" className="footerSubOptions">
-                      Infrastructure
-                    </Typography>
+                    {_.isArray(servicesArray) &&
+                      !_.isEmpty(servicesArray) &&
+                      servicesArray.map((item, index) => {
+                        return (
+                          <Typography
+                            onClick={() => {
+                              navigateServices(item?.title);
+                            }}
+                            variant="h8"
+                            className="footerSubOptions"
+                          >
+                            {item?.title}
+                          </Typography>
+                        );
+                      })}
                   </Grid>
                   <Grid item lg={3}>
                     <Typography variant="h6" className="footerTitle">
                       Contact Info
                     </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item lg={12}>
+                <Grid container justifyContent="center">
+                  <Grid
+                    item
+                    lg={3}
+                    style={{
+                      flexDirection: "coloumn",
+                      justifyContent: "space-between",
+                      display: "flex",
+                    }}
+                  >
+                    <Grid item lg={3}>
+                      <FacebookOutlinedIcon />
+                    </Grid>
+                    <Grid item lg={3}>
+                      <TwitterIcon />
+                    </Grid>
+                    <Grid item lg={3}>
+                      <TwitterIcon />
+                    </Grid>
+                    <Grid item lg={3}>
+                      <WhatsappOutlinedIcon />
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
@@ -165,45 +223,7 @@ function Footer(props) {
         </Grid>
       </Grid>
     </div>
-    // <Grid container spacing={2}>
-    //     <Grid item xs={7}>
-    //         <div className="backgroungImg" style={{ backgroundImage: `url(${require("../images/shape1.png")})`}}>
-    //             <Grid container alignContent='center' justifyContent='center'>
-
-    //     <Grid container style={{ marginTop: '200px'}} spacing={2}>
-    //         <Grid item lg={12} className="titleStyle" >
-    //           <h2 className="titleStyle">
-    //             {title}
-    //           </h2>
-    //         </Grid>
-    //         <Grid item lg={12}>
-    //         <Typography variant="h5" component="h6">
-    //         Get started
-    //     </Typography>
-    //         </Grid>
-    //   </Grid>
-    //             </Grid>
-
-    //         </div>
-    //       {/* <img src={require('../images/shape1.png')}  style={{ width: "100%"}}/> */}
-
-    //     </Grid>
-    //     <Grid item xs={5}>
-    //     <img src={require('../images/homepageImageOne.png')} alt="vasave business solution logo" style={ { width: "100%", marginTop: '100px'}}/>
-    //     </Grid>
-
-    //   </Grid>
   );
 }
-
-// Header.propTypes = {
-//   sections: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       url: PropTypes.string.isRequired,
-//     }),
-//   ).isRequired,
-//   title: PropTypes.string.isRequired,
-// };
 
 export default Footer;

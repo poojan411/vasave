@@ -19,7 +19,6 @@ const vbsLogo = "../images/vbs_logo.png";
 
 function ServicesCard(props) {
   const { sections, title, headerData, screen } = props;
-  const backgroungImg = "../images/shape1.png";
   console.log("title =========>", title);
   const servicesLeft = [
     {

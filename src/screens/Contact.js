@@ -146,15 +146,4 @@ function Contact(props) {
   );
 }
 
-// {/* <Grid container spacing={2}>
-//         <Grid item xs={6}>
-//           <img src={require('../images/shape1.png')}  style={{ width: "100%"}}/>
-//           {/* svg syntax below */}
-//         {/* <img src={waveone} style={{ width: "100%"}}/> */}
-//         </Grid>
-//         <Grid item xs={6}>
-//         <img src={require('../images/homepageImageOne.png')} alt="vasave business solution logo" style={ { width: "100%"}}/>
-//         </Grid>
-
-//       </Grid> */}
 export default Contact;
