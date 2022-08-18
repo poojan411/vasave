@@ -1,0 +1,13 @@
+.titleStyles{
+    font-size: 25px;
+    font-weight: 600;
+    
+}
+.descriptionStyle{
+    margin-bottom: 2.5rem !important;
+    text-align: left;
+    /* letter-spacing: 1px; */
+    line-height: 24px;
+    font-size: 18px;
+    color: #6c6e75;
+}

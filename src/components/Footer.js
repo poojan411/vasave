@@ -30,7 +30,7 @@ function Footer(props) {
   //   console.log("currentYear =========>", currentYear);
   const quickLinksArray = [
     { id: 1, title: "About Vasave business", path: "/aboutus" },
-    { id: 2, title: "What we stand for", path: "/aboutus" },
+    { id: 2, title: "What we stand for", path: "/whatWeStandFor" },
     { id: 3, title: " Our services", path: "/services" },
   ];
   const servicesArray = [

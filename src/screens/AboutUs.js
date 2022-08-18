@@ -13,6 +13,17 @@ import AboutUSImg from "../images/about/about_vasave.jpg";
 import WhyVasaveImg from "../images/about/about_why_vasave.jpg";
 import AboutOurSolution from "../images/about/about_why_vasave.jpg";
 import "../styles/aboutUs.css";
+import AwsImg from "../images/ourPartners/aws_partner.png";
+import HpImg from "../images/ourPartners/hp_partner.png";
+import GoogleCloudImg from "../images/ourPartners/google_cloud_partner.png";
+import DellImg from "../images/ourPartners/dell_partner.png";
+import VmwareImg from "../images/ourPartners/vmware_partner.png";
+import MicrosoftImg from "../images/ourPartners/microsoft_partner.png";
+import SophosImg from "../images/ourPartners/sophos_partner.png";
+import LenovoImg from "../images/ourPartners/lenovo_partner.png";
+import IbmImg from "../images/ourPartners/ibm_partner.png";
+import ZohoImg from "../images/ourPartners/zoho_partner.png";
+import KasperskyImg from "../images/ourPartners/kaspersky_partner.png";
 
 function AboutUs(props) {
   useEffect(() => {
@@ -59,6 +70,19 @@ function AboutUs(props) {
       title: "contact",
       detials: "contact",
     },
+  ];
+  const ourPartners = [
+    { id: 1, title: "aws", image: AwsImg },
+    { id: 1, title: "aws", image: HpImg },
+    { id: 1, title: "aws", image: GoogleCloudImg },
+    { id: 1, title: "aws", image: DellImg },
+    { id: 1, title: "aws", image: VmwareImg },
+    { id: 1, title: "aws", image: MicrosoftImg },
+    { id: 1, title: "aws", image: SophosImg },
+    { id: 1, title: "aws", image: LenovoImg },
+    { id: 1, title: "aws", image: IbmImg },
+    { id: 1, title: "aws", image: ZohoImg },
+    { id: 1, title: "aws", image: KasperskyImg },
   ];
   return (
     <div>
@@ -119,9 +143,31 @@ function AboutUs(props) {
             })}
         </Grid>
       </Grid>
-      <Grid container>
+      <Grid container justifyContent="center">
         <Grid item lg={12}>
           <p className="titleStyle">Our Partners</p>
+        </Grid>
+        <Grid item lg={8}>
+          <Grid
+            container
+            spacing={2}
+            // justifyContent="space-between"
+            flexDirection="row"
+          >
+            {_.isArray(ourPartners) &&
+              !_.isEmpty(ourPartners) &&
+              ourPartners.map((item, index) => {
+                return (
+                  <Grid item lg={3}>
+                    <img
+                      src={item?.image}
+                      alt={index.toString()}
+                      className="partnerImage"
+                    />
+                  </Grid>
+                );
+              })}
+          </Grid>
         </Grid>
       </Grid>
 
