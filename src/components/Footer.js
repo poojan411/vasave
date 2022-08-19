@@ -21,12 +21,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import ImageListItem from "@mui/material/ImageListItem";
-import { height } from "@mui/system";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import WhatsappOutlinedIcon from "@mui/icons-material/WhatsappOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
+
 import "../styles/footer.css";
 import termsCondition from "../config/policyFiles/terms-condition.pdf";
 import privacyPolicy from "../config/policyFiles/privacy-policy.pdf";
@@ -87,13 +82,19 @@ function Footer(props) {
           <div
             className="backgroungImgFooter"
             style={{
-              backgroundImage: `url(${require("../images/FooterWaveNew.png")})`,
+              backgroundImage: `url(${require("../images/test/footer_NewVariant2.png")})`,
             }}
           >
             <Grid container justifyContent="center" className="footerContetdiv">
-              <Grid item lg={8.8} spacing={1}>
+              <Grid item xl={8.8} lg={10} md={12} spacing={1}>
                 <Grid container>
-                  <Grid item lg={3} justifyContent="center">
+                  <Grid
+                    item
+                    lg={3}
+                    md={10}
+                    justifyContent="center"
+                    className="FooterLogoDiv"
+                  >
                     <ImageListItem>
                       <img
                         src={require("../images/vbs_logo.png")}
@@ -112,7 +113,7 @@ function Footer(props) {
                       </Typography>
                     </Grid>
                   </Grid>
-                  <Grid item lg={3}>
+                  <Grid item lg={3} md={4}>
                     <Typography variant="h6" className="footerTitle">
                       Quick Link
                     </Typography>
@@ -134,7 +135,7 @@ function Footer(props) {
                         );
                       })}
                   </Grid>
-                  <Grid item lg={3}>
+                  <Grid item lg={3} md={4}>
                     <Typography variant="h6" className="footerTitle">
                       Services
                     </Typography>
@@ -154,18 +155,19 @@ function Footer(props) {
                         );
                       })}
                   </Grid>
-                  <Grid item lg={3}>
+                  <Grid item lg={3} md={4}>
                     <Typography variant="h6" className="footerTitle">
                       Contact Info
                     </Typography>
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item lg={12}>
+              <Grid item lg={12} md={12}>
                 <Grid container justifyContent="center">
                   <Grid
                     item
                     lg={3}
+                    md={4}
                     style={{
                       flexDirection: "coloumn",
                       justifyContent: "space-between",
@@ -173,19 +175,31 @@ function Footer(props) {
                     }}
                   >
                     <Grid item lg={3}>
-                      <FontAwesomeIcon icon={faFacebook} />
+                      <FontAwesomeIcon
+                        className="iconStyle"
+                        icon={faFacebook}
+                      />
                     </Grid>
                     <Grid item lg={3}>
-                      <FontAwesomeIcon icon={faTwitter} />
+                      <FontAwesomeIcon className="iconStyle" icon={faTwitter} />
                     </Grid>
                     <Grid item lg={3}>
-                      <FontAwesomeIcon icon={faInstagram} />
+                      <FontAwesomeIcon
+                        className="iconStyle"
+                        icon={faInstagram}
+                      />
                     </Grid>
                     <Grid item lg={3}>
-                      <FontAwesomeIcon icon={faLinkedin} />
+                      <FontAwesomeIcon
+                        className="iconStyle"
+                        icon={faLinkedin}
+                      />
                     </Grid>
                     <Grid item lg={3}>
-                      <FontAwesomeIcon icon={faWhatsapp} />
+                      <FontAwesomeIcon
+                        className="iconStyle"
+                        icon={faWhatsapp}
+                      />
                     </Grid>
                   </Grid>
                 </Grid>
@@ -194,16 +208,22 @@ function Footer(props) {
           </div>
         </Grid>
 
-        <Grid item lg={12} className="footerCopyrightDiv">
+        <Grid
+          item
+          lg={12}
+          md={12}
+          style={{ backgroundColor: "#0E57A0" }}
+          className="footerCopyrightDiv"
+        >
           <Grid container justifyContent="center">
-            <Grid item lg={5}>
+            <Grid item lg={5} md={10}>
               <p className="footerText">
                 Copyright © {currentYear} Made with<span> ❤️ </span> By Vasave,
                 All Rights Reserved
               </p>
             </Grid>
-            <Grid item lg={5}>
-              <Grid container justifyContent="flex-start">
+            <Grid item lg={5} md={10}>
+              <Grid container className="policiesDiv">
                 <Grid item lg={4}>
                   <a
                     href={termsCondition}

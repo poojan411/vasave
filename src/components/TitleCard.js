@@ -20,16 +20,25 @@ function TitleCard(props) {
   console.log("title =========>", title);
 
   return (
-    <div>
+    <div
+      className={screen === "home" ? "mainBackgroundImage" : null}
+      style={{
+        // shape1 old variant
+        backgroundImage:
+          screen === "home"
+            ? `url(${require("../images/test/homepageImg18_8_2.jpg")})`
+            : "",
+      }}
+    >
       {screen === "home" ? (
         <Grid container spacing={2}>
-          <Grid item xs={7}>
+          <Grid item xs={12}>
             <div
               className="backgroungImg"
-              style={{
-                // shape1 old variant
-                backgroundImage: `url(${require("../images/shape1New.png")})`,
-              }}
+              // style={{
+              //   // shape1 old variant
+              //   backgroundImage: `url(${require("../images/shape1New.png")})`,
+              // }}
             >
               <Grid container alignContent="center" justifyContent="center">
                 <Grid
@@ -38,28 +47,28 @@ function TitleCard(props) {
                   spacing={2}
                   justifyContent="center"
                 >
-                  <Grid item md={12} lg={8} xl={7} className="titleStyle">
+                  {/* <Grid item md={12} lg={8} xl={7} className="titleStyle">
                     <h2 className="titleStyle">{title}</h2>
                   </Grid>
                   <Grid container justifyContent="center">
                     <Grid item md={10} lg={7} xl={6}>
-                      <Typography variant="h5" component="h6">
+                      <Typography variant="h5" component="h6" color="#ffff">
                         Get started
                       </Typography>
                     </Grid>
-                  </Grid>
+                  </Grid> */}
                 </Grid>
               </Grid>
             </div>
             {/* <img src={require('../images/shape1.png')}  style={{ width: "100%"}}/> */}
           </Grid>
-          <Grid item xs={5}>
+          {/* <Grid item xs={5}>
             <img
               src={require("../images/Asset1.png")}
               alt="vasave business solution logo"
               style={{ width: "100%", marginTop: "100px" }}
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       ) : (
         <Grid

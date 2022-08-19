@@ -66,6 +66,14 @@ function ServicesCard(props) {
     // <Grid cotainer justifyContent="center">
     //   <Grid item lg={8}>
     <Grid container spacing={2}>
+      <Grid item lg={5} style={{ padding: "20px !important" }}>
+        <img
+          // src={require("../images/servicesImage.png")}
+          src={require("../images/test/serviceImage_1.png")}
+          alt="vasave business services"
+          style={{ width: "89%", height: "384px" }}
+        />
+      </Grid>
       <Grid item lg={3.5} style={{ padding: "20px !important" }}>
         {!_.isEmpty(servicesLeft) &&
           servicesLeft.map((item, index) => {
@@ -80,13 +88,6 @@ function ServicesCard(props) {
               />
             );
           })}
-      </Grid>
-      <Grid item lg={5} style={{ padding: "20px !important" }}>
-        <img
-          src={require("../images/servicesImage.png")}
-          alt="vasave business services"
-          style={{ width: "89%", marginTop: "38px", height: "384px" }}
-        />
       </Grid>
       <Grid item lg={3.5} style={{ padding: "20px !important" }}>
         {!_.isEmpty(servicesRight) &&

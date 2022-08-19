@@ -1,14 +1,43 @@
 .footerText{
     text-align: center;
+    color: #ffff;
 }
 .footerText2{
     text-align: center;
     cursor: pointer;
+    color: #ffff;
 
 }
 .footerContetdiv{
     margin-top: 200px;
+ 
 }
+@media screen and (max-width: 1600px) {
+    .footerContetdiv {
+     margin-top: 150px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .FooterLogoDiv {
+     margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .FooterLogoDiv {
+    justify-content: center;
+    }
+  }
+
+  .policiesDiv{
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 1200px) {
+    .policiesDiv {
+    justify-content: space-around;
+    flex-direction: column;
+    }
+  }
+
 .footerCopyrightDiv{
     /* background-color: aliceblue; */
     padding: 2px;
@@ -18,14 +47,16 @@
     height: 680px;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     align-items: center;
 }
+
 .footerTitle{
     font-size: 24px !important;
     font-weight: 600 !important;
     margin-bottom: 25px !important;
+    color: #ffff;
 }
 .footerParaStyle{
     font-size: 17px !important;
@@ -36,10 +67,10 @@
     width: 93%;
     letter-spacing: 0.7px;
     text-align: left;
-    color: #6c6e75 !important;
+    color: #ffff !important;
 }
 .footerSubOptions{
-    color: #6c6e75;
+    color: #ffff;
 display: flex;
 justify-content: center;
 margin: 20px 10px !important;
@@ -59,5 +90,10 @@ a {
   a:hover {
     color: #59e3a7;
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  .iconStyle{
+    color: #ffff;
     cursor: pointer;
   }
