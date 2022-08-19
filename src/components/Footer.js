@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTwitter,
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -21,6 +31,11 @@ import "../styles/footer.css";
 import termsCondition from "../config/policyFiles/terms-condition.pdf";
 import privacyPolicy from "../config/policyFiles/privacy-policy.pdf";
 import cookiesPolicy from "../config/policyFiles/cookies-policy.pdf";
+// import fbSvg from "../images/SocialMediaSvg/Fb.svg";
+// import instaSvg from "../images/SocialMediaSvg/Instagram.svg";
+// import linkedInSvg from "../images/SocialMediaSvg/Linkdin.svg";
+// import TwitterSvg from "../images/SocialMediaSvg/Twitter.svg";
+// import WhatsppSvg from "../images/SocialMediaSvg/Whatsapp.svg";
 
 const vbsLogo = "../images/vbs_logo.png";
 
@@ -158,16 +173,19 @@ function Footer(props) {
                     }}
                   >
                     <Grid item lg={3}>
-                      <FacebookOutlinedIcon />
+                      <FontAwesomeIcon icon={faFacebook} />
                     </Grid>
                     <Grid item lg={3}>
-                      <TwitterIcon />
+                      <FontAwesomeIcon icon={faTwitter} />
                     </Grid>
                     <Grid item lg={3}>
-                      <TwitterIcon />
+                      <FontAwesomeIcon icon={faInstagram} />
                     </Grid>
                     <Grid item lg={3}>
-                      <WhatsappOutlinedIcon />
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </Grid>
+                    <Grid item lg={3}>
+                      <FontAwesomeIcon icon={faWhatsapp} />
                     </Grid>
                   </Grid>
                 </Grid>
