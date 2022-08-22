@@ -79,6 +79,27 @@ function Footer(props) {
       behavior: "smooth",
     });
   };
+  const socialMediaRedirect = (id) => {
+    if (id === "fb") {
+      window.open(
+        "https://www.facebook.com/VasaveBusinessSolutions",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } else if (id === "in") {
+      window.open(
+        "https://www.instagram.com/vasavebs/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } else if (id === "lin") {
+      window.open(
+        "https://www.linkedin.com/company/vasave-business-solutions-ltd/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+  };
   return (
     <div>
       <Grid container>
@@ -207,27 +228,45 @@ function Footer(props) {
                   >
                     <Grid item lg={3}>
                       <FontAwesomeIcon
+                        onClick={() => {
+                          socialMediaRedirect("fb");
+                        }}
                         className="iconStyle"
                         icon={faFacebook}
                       />
                     </Grid>
                     <Grid item lg={3}>
-                      <FontAwesomeIcon className="iconStyle" icon={faTwitter} />
+                      <FontAwesomeIcon
+                        onClick={() => {
+                          socialMediaRedirect("tweet");
+                        }}
+                        className="iconStyle"
+                        icon={faTwitter}
+                      />
                     </Grid>
                     <Grid item lg={3}>
                       <FontAwesomeIcon
+                        onClick={() => {
+                          socialMediaRedirect("in");
+                        }}
                         className="iconStyle"
                         icon={faInstagram}
                       />
                     </Grid>
                     <Grid item lg={3}>
                       <FontAwesomeIcon
+                        onClick={() => {
+                          socialMediaRedirect("lin");
+                        }}
                         className="iconStyle"
                         icon={faLinkedin}
                       />
                     </Grid>
                     <Grid item lg={3}>
                       <FontAwesomeIcon
+                        onClick={() => {
+                          socialMediaRedirect("whap");
+                        }}
                         className="iconStyle"
                         icon={faWhatsapp}
                       />
