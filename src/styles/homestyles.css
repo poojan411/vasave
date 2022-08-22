@@ -44,3 +44,18 @@
 .contentTitle3{
    
 }
+@media screen and (max-width: 900px) {
+    .featureCardDivHome{
+        justify-content: center;
+        display: flex;
+    }
+    .waveStringStyles {
+        height: auto;
+    }
+    .contentTitle3{
+        padding: 10px 50px;
+    }
+    .cardsContainer{
+        justify-content: center;
+    }
+}

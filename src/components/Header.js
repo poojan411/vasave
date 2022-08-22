@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 // import { Link, Navigate} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { faGripLines } from "@fortawesome/free-solid-svg-icons";
 
 // import IconButton from '@mui/material/IconButton';
 // import SearchIcon from '@mui/icons-material/Search';
@@ -77,9 +78,9 @@ function Header(props) {
         // sx={{ borderBottom: 1, borderColor: "divider" }}
       >
         <Grid container justifyContent="center">
-          <Grid item xl={10} lg={12} md={12}>
+          <Grid item xl={10} lg={12} md={12} sm={12}>
             <Grid container justifyContent="space-between" flexDirection="row">
-              <Grid item lg={4}>
+              <Grid item lg={4} md={4} sm={4}>
                 <ImageListItem>
                   <img
                     src={require("../images/vbs_logo.png")}
@@ -88,13 +89,13 @@ function Header(props) {
                   />
                 </ImageListItem>
               </Grid>
-              <Grid item lg={6} alignSelf="center">
+              <Grid item lg={6} md={8} sm={8} alignSelf="center">
                 <Grid container spacing={2} justifyContent="center">
                   {headerOptions &&
                     headerOptions.map((item, index) => {
                       console.log("headerOptions", item?.title);
                       return (
-                        <Grid item lg={2}>
+                        <Grid item lg={2} md={2.5} sm={3}>
                           <Typography
                             key={index}
                             component="h2"

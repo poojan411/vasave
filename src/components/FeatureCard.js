@@ -12,12 +12,12 @@ function FeatureCard(props) {
   return (
     <Card
       sx={{ maxWidth: 345 }}
-      style={{
-        backgroundColor: "#F7F7F7",
-        padding: "10px",
-        paddingTop: "40px",
-        width: "100%",
-      }}
+      // style={{
+      //   backgroundColor: "#F7F7F7",
+      //   padding: "10px",
+      //   paddingTop: "40px",
+      //   width: "100%",
+      // }}
       className="cardContent"
     >
       <div className="cardAction">

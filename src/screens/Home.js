@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Header from "../components/Header";
@@ -54,6 +54,25 @@ function Home(props) {
       imagePath: creativeImage,
     },
   ];
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
+
+  console.log("windowSize ========>", windowSize);
   return (
     <div>
       <Header headerData={headerOptions} />
@@ -77,16 +96,16 @@ function Home(props) {
           }}
         >
           <Grid container justifyContent="center">
-            <Grid item lg={8} style={{ marginTop: "20px" }}>
+            <Grid item lg={8} md={10} sm={10} style={{ marginTop: "20px" }}>
               <Typography className="contentTitle1home">Features</Typography>
             </Grid>
-            <Grid item lg={8} style={{ marginTop: "20px" }}>
+            <Grid item lg={8} md={10} sm={10} style={{ marginTop: "20px" }}>
               <Typography className="contentTitle2">
                 We are <span style={{ color: "#0F5AA4" }}>different</span>{" "}
                 because...
               </Typography>
             </Grid>
-            <Grid item lg={8} style={{ marginTop: "20px" }}>
+            <Grid item xl={8} lg={10} md={10} style={{ marginTop: "20px" }}>
               <Typography
                 className="contentTitle3"
                 variant="h6"
@@ -102,15 +121,24 @@ function Home(props) {
               </Typography>
             </Grid>
             {/* <==============features cards loop ==============>*/}
-            <Grid item lg={8} style={{ marginTop: "40px" }}>
-              <Grid container spacing={2}>
+            <Grid item xl={8} lg={10} md={10} style={{ marginTop: "40px" }}>
+              <Grid container spacing={2} className="cardsContainer">
                 {featuresArray &&
                   featuresArray.map((item, index) => {
                     return (
                       <Grid
                         item
+                        xl={4}
                         lg={4}
-                        style={{ marginTop: index === 1 ? "85px" : "0px" }}
+                        md={4}
+                        sm={10}
+                        style={{
+                          marginTop:
+                            index === 1 && windowSize?.innerWidth >= 900
+                              ? "85px"
+                              : "0px",
+                        }}
+                        className="featureCardDivHome"
                       >
                         <FeatureCard
                           title={item?.title}

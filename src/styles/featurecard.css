@@ -17,7 +17,9 @@
         margin-top: 13px !important;
 }
 .cardContent{
+    background-color: rgb(247, 247, 247) !important;
     padding: 40px 10px 10px;
+    width: 100%;
 }
 .cardContent:hover {
     background-color: #f0fff4!important
@@ -45,3 +47,9 @@
 .cardContent:hover + .additionalDiv {
     display: block;
 }
+
+@media screen and (max-width: 1724px) {
+    .cardContent {
+     width: 80%;
+    }
+  }
