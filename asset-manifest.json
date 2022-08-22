@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vasave/static/css/main.0ea54130.css",
-    "main.js": "/vasave/static/js/main.b43e923d.js",
+    "main.css": "/vasave/static/css/main.172c41ac.css",
+    "main.js": "/vasave/static/js/main.8811d750.js",
     "static/js/787.0579c8bd.chunk.js": "/vasave/static/js/787.0579c8bd.chunk.js",
     "static/media/footer_NewVariant2.png": "/vasave/static/media/footer_NewVariant2.236d6ba324b4e8afa74e.png",
     "static/media/homepageImg18_8_2.jpg": "/vasave/static/media/homepageImg18_8_2.586f3da9195f3845723a.jpg",
@@ -50,12 +50,12 @@
     "static/media/logo.svg": "/vasave/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/vasave/index.html",
     "static/media/wave.svg": "/vasave/static/media/wave.cb5a6ed8eda44fc33e1ff07935b74d98.svg",
-    "main.0ea54130.css.map": "/vasave/static/css/main.0ea54130.css.map",
-    "main.b43e923d.js.map": "/vasave/static/js/main.b43e923d.js.map",
+    "main.172c41ac.css.map": "/vasave/static/css/main.172c41ac.css.map",
+    "main.8811d750.js.map": "/vasave/static/js/main.8811d750.js.map",
     "787.0579c8bd.chunk.js.map": "/vasave/static/js/787.0579c8bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ea54130.css",
-    "static/js/main.b43e923d.js"
+    "static/css/main.172c41ac.css",
+    "static/js/main.8811d750.js"
   ]
 }
