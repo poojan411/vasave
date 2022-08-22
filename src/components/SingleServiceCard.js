@@ -5,13 +5,17 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import CloudImg from "../images/servicesLogos/cloud.png";
+import ConsultancyImg from "../images/servicesLogos/consultation.png";
+import CyberImage from "../images/servicesLogos/cyber-security.png";
+import InfraImage from "../images/servicesLogos/infrastructure.png";
 
 // import image from "../images/cardLogos/CreativeCardLogo.png";
 import "../styles/singleServiceCard.css";
 
 function SingleServiceCard(props) {
-  const { title, shortDescription, image, onClickNavigate } = props;
-  console.log("image=>", image);
+  const { title, shortDescription, image, onClickNavigate, code } = props;
+  console.log("code=>", code);
   const imagePath = `require("${image}")`;
   return (
     <div
@@ -28,9 +32,19 @@ function SingleServiceCard(props) {
         <Grid item lg={3}>
           <img
             // src={imagePath}
-            src={require("../images/servicesLogos/consultancyLogo.png")}
+            src={
+              code === "cld"
+                ? CloudImg
+                : code === "con"
+                ? ConsultancyImg
+                : code === "cs"
+                ? CyberImage
+                : code === "infra"
+                ? InfraImage
+                : null
+            }
             alt="vasave business services"
-            style={{ height: "80px", width: "80px", marginTop: "15px" }}
+            style={{ height: "65px", width: "65px", marginTop: "15px" }}
           />
           {/* <CardMedia
             component="img"

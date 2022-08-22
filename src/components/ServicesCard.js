@@ -24,24 +24,28 @@ function ServicesCard(props) {
     {
       title: "Cloud",
       shortDescription: "Pleasure rationally service are anyone who pursues",
-      image: "../images/servicesLogos/consultancyLogo.png",
+      image: "../images/servicesLogos/cloud.png",
+      code: "cld",
     },
     {
       title: "Consultancy",
       shortDescription: "Pleasure rationally service are anyone who pursues",
-      image: "../images/servicesLogos/consultancyLogo.png",
+      image: "../images/servicesLogos/consultant-services.png",
+      code: "con",
     },
   ];
   const servicesRight = [
     {
       title: "Cyber Security",
       shortDescription: "Pleasure rationally service are anyone who pursues",
-      image: "../images/servicesLogos/consultancyLogo.png",
+      image: "../images/servicesLogos/cyber-security.png",
+      code: "cs",
     },
     {
       title: "Infrastructure",
       shortDescription: "Pleasure rationally service are anyone who pursues",
-      image: "../images/servicesLogos/consultancyLogo.png",
+      image: "../images/servicesLogos/infrastructure.png",
+      code: "infra",
     },
   ];
   let navigate = useNavigate();
@@ -85,6 +89,7 @@ function ServicesCard(props) {
                 title={item?.title}
                 shortDescription={item?.shortDescription}
                 image={item?.image}
+                code={item?.code}
               />
             );
           })}
@@ -100,6 +105,7 @@ function ServicesCard(props) {
                 title={item?.title}
                 shortDescription={item?.shortDescription}
                 image={item?.image}
+                code={item?.code}
               />
             );
           })}
