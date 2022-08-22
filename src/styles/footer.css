@@ -55,8 +55,9 @@
 .footerTitle{
     font-size: 24px !important;
     font-weight: 600 !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 10px !important;
     color: #ffff;
+    text-align: left;
 }
 .footerParaStyle{
     font-size: 17px !important;
@@ -69,26 +70,45 @@
     text-align: left;
     color: #ffff !important;
 }
+.footerSubContentDiv{
+    justify-content: flex-start;
+
+}
 .footerSubOptions{
     color: #ffff;
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 margin: 20px 10px !important;
 font-size: 16px;
 font-weight: 400;
 text-transform: capitalize !important;
 }
 .footerSubOptions:hover{
-color: #59e3a7;
+color: #0F5AA4;
 cursor: pointer;
 }
+.footerSubOptionsContact{
+    color: #ffff;
+display: flex;
+justify-content: flex-start;
+margin: 20px 10px !important;
+font-size: 16px;
+font-weight: 400;
+text-transform: capitalize !important;  
+text-align: left;
+align-items: center;
+}
+.footerSubOptionsContact:hover{
+    color: #0F5AA4;
+    cursor: pointer;
+    }
 a {
     text-decoration: none;
     color: black;
   }
   
   a:hover {
-    color: #59e3a7;
+    color: #0F5AA4;
     text-decoration: none;
     cursor: pointer;
   }
@@ -96,4 +116,9 @@ a {
   .iconStyle{
     color: #ffff;
     cursor: pointer;
+  }
+  .contactIconStyle{
+    color: #ffff;
+    cursor: pointer;
+    margin-right: 15px;
   }

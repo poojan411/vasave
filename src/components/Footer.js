@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import _ from "lodash";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faHome,
+  faMobile,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
   faFacebook,
@@ -159,6 +163,33 @@ function Footer(props) {
                     <Typography variant="h6" className="footerTitle">
                       Contact Info
                     </Typography>
+                    <Grid container className="footerSubContentDiv">
+                      <Typography className="footerSubOptionsContact">
+                        <FontAwesomeIcon
+                          className="contactIconStyle"
+                          icon={faHome}
+                        />
+                        Helena 3, Airport House Purley Way Croydon cr0 0xz
+                      </Typography>
+                    </Grid>
+                    <Grid container className="footerSubContentDiv">
+                      <Typography className="footerSubOptionsContact">
+                        <FontAwesomeIcon
+                          className="contactIconStyle"
+                          icon={faEnvelope}
+                        />
+                        Info@vasave.uk
+                      </Typography>
+                    </Grid>{" "}
+                    <Grid container className="footerSubContentDiv">
+                      <Typography className="footerSubOptionsContact">
+                        <FontAwesomeIcon
+                          className="contactIconStyle"
+                          icon={faMobile}
+                        />
+                        +44 20 3488 6800
+                      </Typography>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>

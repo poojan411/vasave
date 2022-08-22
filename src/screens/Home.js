@@ -82,7 +82,7 @@ function Home(props) {
             </Grid>
             <Grid item lg={8} style={{ marginTop: "20px" }}>
               <Typography className="contentTitle2">
-                We are <span style={{ color: "#59e3a7" }}>different</span>{" "}
+                We are <span style={{ color: "#0F5AA4" }}>different</span>{" "}
                 because...
               </Typography>
             </Grid>
@@ -131,7 +131,7 @@ function Home(props) {
         </Grid>
         <Grid item lg={8} style={{ marginTop: "20px" }}>
           <Typography className="contentTitle2">
-            Check <span style={{ color: "#59e3a7" }}>our</span> Services
+            Check <span style={{ color: "#0F5AA4" }}>our</span> Services
           </Typography>
         </Grid>
         <Grid item lg={8} style={{ marginTop: "20px", marginBottom: "40px" }}>
