@@ -12,6 +12,8 @@ import { faGripLines } from "@fortawesome/free-solid-svg-icons";
 // import SearchIcon from '@mui/icons-material/Search';
 import Typography from "@mui/material/Typography";
 import ImageListItem from "@mui/material/ImageListItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { height } from "@mui/system";
 import "../styles/header.css";
 
@@ -41,8 +43,25 @@ const headerOptions = [
 ];
 
 function Header(props) {
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
   const { sections, title, headerData } = props;
-  console.log("headerData", headerData);
+  console.log("windowSize========>", windowSize);
 
   const [headerColor, setHeaderColor] = useState("header");
 
@@ -83,49 +102,71 @@ function Header(props) {
               <Grid item lg={4} md={4} sm={4}>
                 <ImageListItem>
                   <img
-                    src={require("../images/vbs_logo.png")}
+                    src={require("../images/logos/Vasave_Logo-white.png")}
                     alt="vasave business solution logo"
                     style={{ height: 65, width: "100%" }}
                   />
                 </ImageListItem>
               </Grid>
-              <Grid item lg={6} md={8} sm={8} alignSelf="center">
-                <Grid container spacing={2} justifyContent="center">
-                  {headerOptions &&
-                    headerOptions.map((item, index) => {
-                      console.log("headerOptions", item?.title);
-                      return (
-                        <Grid item lg={2} md={2.5} sm={3}>
-                          <Typography
-                            key={index}
-                            component="h2"
-                            variant="h6"
-                            align="center"
-                            onClick={() => {
-                              console.log("selectedpage", item);
-                              navigatePage(item);
-
-                              // <Link to="/aboutus" />
-                            }}
-                            // style={{
-                            //   lineHeight: 2.3,
-                            //   color: "#181c51",
-                            //   fontSize: "20px",
-                            //   textTransform: "capitalize",
-                            //   backgroungColor: "green",
-                            //   cursor: "pointer",
-                            // }}
-                            noWrap
-                            sx={{ flex: 1 }}
-                            className="headerTitleStyle"
-                          >
-                            {item?.title}
-                          </Typography>
-                        </Grid>
-                      );
-                    })}
+              {windowSize?.innerWidth <= 800 ? (
+                <Grid
+                  item
+                  md={3}
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{ display: "flex" }}
+                >
+                  <FontAwesomeIcon
+                    onClick={() => {
+                      console.log("open drawer");
+                    }}
+                    color="blue"
+                    style={{
+                      paddingRight: "10px",
+                      fontSize: "32px",
+                      marginRight: "20px",
+                    }}
+                    icon={faGripLines}
+                  />
                 </Grid>
-              </Grid>
+              ) : (
+                <Grid item lg={6} md={8} sm={8} alignSelf="center">
+                  <Grid container spacing={2} justifyContent="center">
+                    {headerOptions &&
+                      headerOptions.map((item, index) => {
+                        console.log("headerOptions", item?.title);
+                        return (
+                          <Grid item lg={2} md={2.5} sm={3}>
+                            <Typography
+                              key={index}
+                              component="h2"
+                              variant="h6"
+                              align="center"
+                              onClick={() => {
+                                console.log("selectedpage", item);
+                                navigatePage(item);
+                                // <Link to="/aboutus" />
+                              }}
+                              // style={{
+                              //   lineHeight: 2.3,
+                              //   color: "#181c51",
+                              //   fontSize: "20px",
+                              //   textTransform: "capitalize",
+                              //   backgroungColor: "green",
+                              //   cursor: "pointer",
+                              // }}
+                              noWrap
+                              sx={{ flex: 1 }}
+                              className="headerTitleStyle"
+                            >
+                              {item?.title}
+                            </Typography>
+                          </Grid>
+                        );
+                      })}
+                  </Grid>
+                </Grid>
+              )}
             </Grid>
           </Grid>
 

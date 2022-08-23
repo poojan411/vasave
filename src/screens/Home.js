@@ -154,7 +154,7 @@ function Home(props) {
         </div>
       </Grid>
       <Grid container justifyContent="center" style={{ marginTop: "200px" }}>
-        <Grid item lg={8} style={{ marginBottom: "20px" }}>
+        <Grid item lg={8} md={10} sm={10} style={{ marginTop: "20px" }}>
           <Typography className="contentTitle1home">Services</Typography>
         </Grid>
         <Grid item lg={8} style={{ marginTop: "20px" }}>

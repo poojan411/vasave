@@ -26,7 +26,7 @@ function TitleCard(props) {
         // shape1 old variant
         backgroundImage:
           screen === "home"
-            ? `url(${require("../images/test/homepageImg18_8_2.jpg")})`
+            ? `url(${require("../images/test/Web_Banner_4.jpg")})`
             : "",
       }}
     >
