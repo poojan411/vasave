@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/vasave/static/css/main.172c41ac.css",
-    "main.js": "/vasave/static/js/main.8811d750.js",
+    "main.js": "/vasave/static/js/main.0642b8f1.js",
     "static/js/787.0579c8bd.chunk.js": "/vasave/static/js/787.0579c8bd.chunk.js",
     "static/media/footer_NewVariant2.png": "/vasave/static/media/footer_NewVariant2.236d6ba324b4e8afa74e.png",
-    "static/media/homepageImg18_8_2.jpg": "/vasave/static/media/homepageImg18_8_2.586f3da9195f3845723a.jpg",
+    "static/media/Web_Banner_4.jpg": "/vasave/static/media/Web_Banner_4.82230ae53f7d818aea00.jpg",
     "static/media/serviceImage_1.png": "/vasave/static/media/serviceImage_1.13dcad9e0b1a3327396e.png",
+    "static/media/Vasave_Logo-white.png": "/vasave/static/media/Vasave_Logo-white.408f75302a65e622df65.png",
     "static/media/consultancy_ecommerce.png": "/vasave/static/media/consultancy_ecommerce.40aee2fa6b2d2b6b2729.png",
     "static/media/consultancy_training.png": "/vasave/static/media/consultancy_training.40b262389eed7cd6b0f7.png",
     "static/media/aws_partner.png": "/vasave/static/media/aws_partner.1b024fd70bd9eb15118d.png",
@@ -51,11 +52,11 @@
     "index.html": "/vasave/index.html",
     "static/media/wave.svg": "/vasave/static/media/wave.cb5a6ed8eda44fc33e1ff07935b74d98.svg",
     "main.172c41ac.css.map": "/vasave/static/css/main.172c41ac.css.map",
-    "main.8811d750.js.map": "/vasave/static/js/main.8811d750.js.map",
+    "main.0642b8f1.js.map": "/vasave/static/js/main.0642b8f1.js.map",
     "787.0579c8bd.chunk.js.map": "/vasave/static/js/787.0579c8bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.172c41ac.css",
-    "static/js/main.8811d750.js"
+    "static/js/main.0642b8f1.js"
   ]
 }
