@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+import Drawer from "@mui/material/Drawer";
 import Grid from "@mui/material/Grid";
 // import { Link, Navigate} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ import { faGripLines } from "@fortawesome/free-solid-svg-icons";
 import Typography from "@mui/material/Typography";
 import ImageListItem from "@mui/material/ImageListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Paper from "@mui/material/Paper";
 
 import { height } from "@mui/system";
 import "../styles/header.css";
@@ -44,6 +46,9 @@ const headerOptions = [
 
 function Header(props) {
   const [windowSize, setWindowSize] = useState(getWindowSize());
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  console.log("openDrawer =======>", openDrawer);
 
   useEffect(() => {
     function handleWindowResize() {
@@ -102,7 +107,7 @@ function Header(props) {
               <Grid item lg={4} md={4} sm={4}>
                 <ImageListItem>
                   <img
-                    src={require("../images/logos/Vasave_Logo-white.png")}
+                    src={require("../images/logos/Vasave_Logo-Blue.png")}
                     alt="vasave business solution logo"
                     style={{ height: 65, width: "100%" }}
                   />
@@ -119,6 +124,7 @@ function Header(props) {
                   <FontAwesomeIcon
                     onClick={() => {
                       console.log("open drawer");
+                      setOpenDrawer(!openDrawer);
                     }}
                     color="blue"
                     style={{
@@ -128,6 +134,7 @@ function Header(props) {
                     }}
                     icon={faGripLines}
                   />
+                  <Paper elevation={3} />
                 </Grid>
               ) : (
                 <Grid item lg={6} md={8} sm={8} alignSelf="center">
@@ -170,69 +177,54 @@ function Header(props) {
             </Grid>
           </Grid>
 
-          {/* <Grid item lg={4}>
-        <ImageListItem>
-          <img src={require('../images/vbs_logo.png')} alt="vasave business solution logo" style={ {height:65, width: "100%"}}/>
-        </ImageListItem>
-
-        </Grid>
-        <Grid item lg={6} alignSelf="center">
-          
-      <Grid container spacing={2} justifyContent="flex-end">
-      {headerOptions && headerOptions.map((item, index) =>{
-    console.log('headerOptions', item?.title);
-          return (
-            <Grid item lg={2} >
-        
-
-              <Typography
-              key={index}
-              component="h2"
-              variant="h6"
-              color="green"
-              align="center"
-              onClick={() => {
-                console.log('selectedpage', item);
-                navigatePage(item);
-              
-                // <Link to="/aboutus" />
-              }}
-              style={{
-           
-                lineHeight: 2.3,
-                color: '#181c51',
-                fontSize: '20px',
-                textTransform: 'capitalize',
-                backgroungColor: 'green',
-                cursor:'pointer'
-              }}
-              noWrap
-              sx={{ flex: 1 }}
+          <Drawer variant="persistent" anchor="left" open={openDrawer}>
+            <Grid
+              container
+              spacing={2}
+              justifyContent="center"
+              flexDirection="column"
+              style={{ width: "40%", paddingTop: "20px" }}
             >
-             {item?.title}
-              
-            </Typography>
-              </Grid>
-          )
+              {headerOptions &&
+                headerOptions.map((item, index) => {
+                  console.log("headerOptions", item?.title);
+                  return (
+                    <Grid item>
+                      <Typography
+                        key={index}
+                        component="h2"
+                        variant="h6"
+                        align="center"
+                        onClick={() => {
+                          console.log("selectedpage", item);
+                          navigatePage(item);
+                          setOpenDrawer(false);
+                          // <Link to="/aboutus" />
+                        }}
+                        style={{
+                          lineHeight: 2.3,
+                          color: "#181c51",
+                          fontSize: "20px",
+                          textTransform: "capitalize",
 
-        })}
-        
-      </Grid>
-          </Grid> */}
+                          cursor: "pointer",
+                          padding: "20px",
+                        }}
+                        noWrap
+                        sx={{ flex: 1 }}
+                        className="headerTitleStyle"
+                      >
+                        {item?.title}
+                      </Typography>
+                    </Grid>
+                  );
+                })}
+            </Grid>
+          </Drawer>
         </Grid>
       </Toolbar>
     </div>
   );
 }
-
-// Header.propTypes = {
-//   sections: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       url: PropTypes.string.isRequired,
-//     }),
-//   ).isRequired,
-//   title: PropTypes.string.isRequired,
-// };
 
 export default Header;
