@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import _ from "lodash";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,6 +41,24 @@ const vbsLogo = "../images/vbs_logo.png";
 
 function Footer(props) {
   const { sections, title, headerData } = props;
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
+  console.log("windowSize==>", windowSize);
   const currentYear = new Date().getFullYear();
   //   console.log("currentYear =========>", currentYear);
   const quickLinksArray = [
@@ -107,16 +126,19 @@ function Footer(props) {
           <div
             className="backgroungImgFooter"
             style={{
-              backgroundImage: `url(${require("../images/test/footer_NewVariant2.png")})`,
+              backgroundImage:
+                windowSize?.innerWidth > 1199
+                  ? `url(${require("../images/test/footer_NewVariant2.png")})`
+                  : "",
             }}
           >
             <Grid container justifyContent="center" className="footerContetdiv">
-              <Grid item xl={8.8} lg={10} md={12} spacing={1}>
+              <Grid item xl={8.8} lg={10} md={11} spacing={1}>
                 <Grid container>
                   <Grid
                     item
                     lg={3}
-                    md={10}
+                    md={6}
                     justifyContent="center"
                     className="FooterLogoDiv"
                   >
@@ -138,7 +160,7 @@ function Footer(props) {
                       </Typography>
                     </Grid>
                   </Grid>
-                  <Grid item lg={3} md={4}>
+                  <Grid item lg={3} md={6}>
                     <Typography variant="h6" className="footerTitle">
                       Quick Link
                     </Typography>
@@ -160,7 +182,7 @@ function Footer(props) {
                         );
                       })}
                   </Grid>
-                  <Grid item lg={3} md={4}>
+                  <Grid item lg={3} md={6}>
                     <Typography variant="h6" className="footerTitle">
                       Services
                     </Typography>
@@ -180,7 +202,7 @@ function Footer(props) {
                         );
                       })}
                   </Grid>
-                  <Grid item lg={3} md={4}>
+                  <Grid item lg={3} md={6}>
                     <Typography variant="h6" className="footerTitle">
                       Contact Info
                     </Typography>

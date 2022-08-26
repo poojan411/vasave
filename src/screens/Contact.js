@@ -36,19 +36,28 @@ function Contact(props) {
     },
   ];
 
+  const [name, setName] = useState("");
+  // const [name, setName] = useState('');
+
   return (
     <div>
       <Header headerData={headerOptions} />
       <TitleCard title="Contact" />
       <Grid container justifyContent="center" style={{ marginTop: "150px" }}>
-        <Grid item lg={7.5} style={{ padding: 20 }}>
+        <Grid item lg={7.5} md={12} xs={12} style={{ padding: 20 }}>
           <Grid
             container
             spacing={5}
             justifyContent="space-between"
             flexDirection="row"
           >
-            <Grid item lg={6} style={{ backgroundColor: "#fff" }}>
+            <Grid
+              item
+              lg={6}
+              md={11}
+              xs={12}
+              style={{ backgroundColor: "#fff" }}
+            >
               <Typography
                 variant="h5"
                 className="formTitleStyle"
@@ -74,6 +83,10 @@ function Contact(props) {
                     variant="outlined"
                     placeholder="Your Full Name"
                     style={{ width: "100%" }}
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.value);
+                    }}
                   />
                 </Grid>
                 <Grid item lg={5.5}>
@@ -111,7 +124,13 @@ function Contact(props) {
                 </Grid>
               </Grid>
               <Grid container spacing={2} style={{ marginTop: "30px" }}>
-                <Grid item lg={11} style={{ textAlign: "left" }}>
+                <Grid
+                  item
+                  lg={11}
+                  md={11}
+                  xs={12}
+                  style={{ textAlign: "left" }}
+                >
                   <span className="buttonStyle"> Send Message </span>
                 </Grid>
               </Grid>

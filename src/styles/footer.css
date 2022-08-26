@@ -21,6 +21,11 @@
     .FooterLogoDiv {
      margin-bottom: 30px;
     }
+    .backgroungImgFooter {
+      background-color: #0F5AA4;
+      height: auto !important  ;
+      padding: 10px 10px;
+    }
   }
   @media screen and (max-width: 900px) {
     .FooterLogoDiv {
