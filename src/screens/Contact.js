@@ -37,6 +37,9 @@ function Contact(props) {
   ];
 
   const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   // const [name, setName] = useState('');
 
   return (
@@ -81,7 +84,7 @@ function Contact(props) {
                     id="outlined-basic"
                     label="Full Name*"
                     variant="outlined"
-                    placeholder="Your Full Name"
+                    floatingLabelText="Your Full Name"
                     style={{ width: "100%" }}
                     value={name}
                     onChange={(e) => {
@@ -94,8 +97,12 @@ function Contact(props) {
                     id="outlined-basic"
                     label="Mobile Number*"
                     variant="outlined"
-                    placeholder="Your Mobile Number"
+                    floatingLabelText="Your Mobile Number"
                     style={{ width: "100%" }}
+                    value={number}
+                    onChange={(e) => {
+                      setNumber(e.value);
+                    }}
                   />
                 </Grid>
               </Grid>
@@ -104,9 +111,13 @@ function Contact(props) {
                   <TextField
                     id="outlined-basic"
                     label="Email Address*"
-                    placeholder="Your Email"
+                    floatingLabelText="Your Email"
                     variant="outlined"
                     style={{ width: "100%" }}
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.value);
+                    }}
                   />
                 </Grid>
               </Grid>
@@ -116,10 +127,14 @@ function Contact(props) {
                     id="outlined-multiline-static"
                     label="Additional Information"
                     multiline
-                    placeholder="Your Message"
+                    floatingLabelText="Your Message"
                     rows={6}
                     variant="outlined"
                     style={{ width: "100%" }}
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.value);
+                    }}
                   />
                 </Grid>
               </Grid>

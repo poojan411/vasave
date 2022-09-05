@@ -109,7 +109,7 @@ function Header(props) {
                   <img
                     src={require("../images/logos/Vasave_Logo-Blue.png")}
                     alt="vasave business solution logo"
-                    style={{ height: 65, width: "100%" }}
+                    style={{ height: 50, width: "100%" }}
                   />
                 </ImageListItem>
               </Grid>

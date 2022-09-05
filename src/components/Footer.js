@@ -117,6 +117,12 @@ function Footer(props) {
         "_blank",
         "noopener,noreferrer"
       );
+    } else if (id === "whap") {
+      window.open(
+        "https://wa.me/4402034886800",
+        "_blank",
+        "noopener,noreferrer"
+      );
     }
   };
   return (
