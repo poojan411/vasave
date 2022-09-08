@@ -73,7 +73,7 @@ function ServicesCard(props) {
       <Grid item lg={5} style={{ padding: "20px !important" }}>
         <img
           // src={require("../images/servicesImage.png")}
-          src={require("../images/test/serviceImage_1.png")}
+          src={require("../images/test/service_image.png")}
           alt="vasave business services"
           style={{ width: "89%", height: "384px" }}
         />

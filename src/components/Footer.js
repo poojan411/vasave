@@ -139,7 +139,7 @@ function Footer(props) {
             }}
           >
             <Grid container justifyContent="center" className="footerContetdiv">
-              <Grid item xl={8.8} lg={10} md={11} spacing={1}>
+              <Grid item xl={8.8} lg={10} md={11} sm={11} spacing={1}>
                 <Grid container>
                   <Grid
                     item
@@ -248,6 +248,7 @@ function Footer(props) {
                     item
                     lg={3}
                     md={4}
+                    sm={8}
                     style={{
                       flexDirection: "coloumn",
                       justifyContent: "space-between",
@@ -310,6 +311,7 @@ function Footer(props) {
           item
           lg={12}
           md={12}
+          sm={12}
           style={{ backgroundColor: "#0E57A0" }}
           className="footerCopyrightDiv"
         >

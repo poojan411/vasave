@@ -84,7 +84,7 @@ function Contact(props) {
                     id="outlined-basic"
                     label="Full Name*"
                     variant="outlined"
-                    floatingLabelText="Your Full Name"
+                    // floatingLabelText="Your Full Name"
                     style={{ width: "100%" }}
                     value={name}
                     onChange={(e) => {
@@ -97,7 +97,7 @@ function Contact(props) {
                     id="outlined-basic"
                     label="Mobile Number*"
                     variant="outlined"
-                    floatingLabelText="Your Mobile Number"
+                    // floatingLabelText="Your Mobile Number"
                     style={{ width: "100%" }}
                     value={number}
                     onChange={(e) => {
@@ -111,7 +111,7 @@ function Contact(props) {
                   <TextField
                     id="outlined-basic"
                     label="Email Address*"
-                    floatingLabelText="Your Email"
+                    // floatingLabelText="Your Email"
                     variant="outlined"
                     style={{ width: "100%" }}
                     value={email}
@@ -127,7 +127,7 @@ function Contact(props) {
                     id="outlined-multiline-static"
                     label="Additional Information"
                     multiline
-                    floatingLabelText="Your Message"
+                    // floatingLabelText="Your Message"
                     rows={6}
                     variant="outlined"
                     style={{ width: "100%" }}

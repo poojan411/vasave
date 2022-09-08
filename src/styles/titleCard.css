@@ -17,6 +17,12 @@
     font-size: 68px;
     letter-spacing: 3px;
 }
+@media screen and (max-width: 900px) {
+    .titleStyle {
+        font-weight: 400 !important;
+        font-size: 38px !important;
+    }
+  }
 .mainBackgroundImage{
     /* height: 1064px;
     width: 100%;
