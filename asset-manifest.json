@@ -1,11 +1,14 @@
 {
   "files": {
     "main.css": "/vasave/static/css/main.5fa89564.css",
-    "main.js": "/vasave/static/js/main.a4ae6d1a.js",
+    "main.js": "/vasave/static/js/main.5e89fa55.js",
     "static/js/787.0579c8bd.chunk.js": "/vasave/static/js/787.0579c8bd.chunk.js",
     "static/media/footer_NewVariant2.png": "/vasave/static/media/footer_NewVariant2.236d6ba324b4e8afa74e.png",
     "static/media/homepage1.png": "/vasave/static/media/homepage1.91338c64fbcd538a8b82.png",
     "static/media/Vasave_Logo-Blue.png": "/vasave/static/media/Vasave_Logo-Blue.1094f37a5b5a2705ec56.png",
+    "static/media/Our_Services-850x512px.jpg": "/vasave/static/media/Our_Services-850x512px.a3fdf511b3d18f9df407.jpg",
+    "static/media/About_Us-850x512px.jpg": "/vasave/static/media/About_Us-850x512px.e68cfcdf49608c71af8f.jpg",
+    "static/media/Contact_Us-850x512px.jpg": "/vasave/static/media/Contact_Us-850x512px.9a6f1416085a1577a0ac.jpg",
     "static/media/consultancy_ecommerce.png": "/vasave/static/media/consultancy_ecommerce.40aee2fa6b2d2b6b2729.png",
     "static/media/consultancy_training.png": "/vasave/static/media/consultancy_training.40b262389eed7cd6b0f7.png",
     "static/media/aws_partner.png": "/vasave/static/media/aws_partner.1b024fd70bd9eb15118d.png",
@@ -35,7 +38,6 @@
     "static/media/sophos_partner.png": "/vasave/static/media/sophos_partner.1c6d93ca797de00ad761.png",
     "static/media/ibm_partner.png": "/vasave/static/media/ibm_partner.286c1bf62c1c4f444fe4.png",
     "static/media/cookies-policy.pdf": "/vasave/static/media/cookies-policy.f3ece24dd959925224bd.pdf",
-    "static/media/homepageImageOne.png": "/vasave/static/media/homepageImageOne.f6bb2b53668f2fe86722.png",
     "static/media/hp_partner.png": "/vasave/static/media/hp_partner.a998a70b506f76152e9a.png",
     "static/media/google_cloud_partner.png": "/vasave/static/media/google_cloud_partner.bb87a337ee5ccf53f26b.png",
     "static/media/zoho_partner.png": "/vasave/static/media/zoho_partner.0db4e80bad4a66938878.png",
@@ -52,11 +54,11 @@
     "index.html": "/vasave/index.html",
     "static/media/wave.svg": "/vasave/static/media/wave.cb5a6ed8eda44fc33e1ff07935b74d98.svg",
     "main.5fa89564.css.map": "/vasave/static/css/main.5fa89564.css.map",
-    "main.a4ae6d1a.js.map": "/vasave/static/js/main.a4ae6d1a.js.map",
+    "main.5e89fa55.js.map": "/vasave/static/js/main.5e89fa55.js.map",
     "787.0579c8bd.chunk.js.map": "/vasave/static/js/787.0579c8bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5fa89564.css",
-    "static/js/main.a4ae6d1a.js"
+    "static/js/main.5e89fa55.js"
   ]
 }
