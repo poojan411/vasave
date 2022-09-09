@@ -17,7 +17,7 @@ const vbsLogo = "../images/vbs_logo.png";
 function TitleCard(props) {
   const { sections, title, headerData, screen } = props;
   const backgroungImg = "../images/shape1.png";
-  console.log("title =========>", title);
+  console.log("screen =========>", screen);
 
   return (
     <div
@@ -100,7 +100,15 @@ function TitleCard(props) {
           </Grid>
           <Grid item xs={5}>
             <img
-              src={require("../images/homepageImageOne.png")}
+              src={
+                screen === "aboutUs"
+                  ? require("../images/test/services/About_Us-850x512px.jpg")
+                  : screen === "contactUs"
+                  ? require("../images/test/services/Contact_Us-850x512px.jpg")
+                  : screen === "services"
+                  ? require("../images/test/services/Our_Services-850x512px.jpg")
+                  : require("../images/test/services/Our_Services-850x512px.jpg")
+              }
               alt="vasave business solution logo"
               style={{ width: "100%", marginTop: "100px" }}
             />

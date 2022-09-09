@@ -45,7 +45,7 @@ function Contact(props) {
   return (
     <div>
       <Header headerData={headerOptions} />
-      <TitleCard title="Contact" />
+      <TitleCard title="Contact" screen="contactUs" />
       <Grid container justifyContent="center" style={{ marginTop: "150px" }}>
         <Grid item lg={7.5} md={12} xs={12} style={{ padding: 20 }}>
           <Grid

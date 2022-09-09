@@ -34,7 +34,7 @@ function WhatWeStandFor(props) {
   return (
     <div>
       <Header headerData={headerOptions} />
-      <TitleCard title="What we stand for" />
+      <TitleCard title="What we stand for" screen="whatWeStandFor" />
       <Grid
         container
         justifyContent="center"

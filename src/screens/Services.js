@@ -34,7 +34,7 @@ function Services(props) {
   return (
     <div>
       <Header headerData={headerOptions} />
-      <TitleCard title="Service" />
+      <TitleCard title="Service" screen="services" />
       <Grid
         container
         justifyContent="center"

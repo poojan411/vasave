@@ -87,7 +87,7 @@ function AboutUs(props) {
   return (
     <div>
       <Header headerData={headerOptions} />
-      <TitleCard title="About Us" />
+      <TitleCard title="About Us" screen="aboutUs" />
       <Grid
         container
         justifyContent="center"
