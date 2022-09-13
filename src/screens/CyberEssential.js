@@ -34,7 +34,7 @@ function CyberEssential(props) {
   return (
     <div>
       <Header headerData={headerOptions} />
-      <TitleCard title="Cyber Essential" />
+      <TitleCard title="Cyber Essential" screen="cyberEssential" />
       <Grid
         container
         justifyContent="center"
